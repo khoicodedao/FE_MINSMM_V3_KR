@@ -14,6 +14,7 @@ import {
   FormLabel,
   FormMessage,
 } from "../components/ui/form";
+import { ReactNode } from "react";
 import { useToast } from "../hooks/use-toast";
 
 const loginSchema = z.object({
@@ -24,7 +25,7 @@ const loginSchema = z.object({
 
 type LoginForm = z.infer<typeof loginSchema>;
 
-export default function HeroSection() {
+export default function HeroSection({ children }: { children?: ReactNode }) {
   const { toast } = useToast();
 
   const form = useForm<LoginForm>({
@@ -54,8 +55,8 @@ export default function HeroSection() {
               No-Drop Services
             </h1>
             <p className="mb-8 text-xl text-blue-100">
-              Urpanel SMM Panel is the provider number #1 in Europe, US and Asia
-              for targeted SMM services. Top 10 SMM supplier worldwide!
+              SMM Panel is the provider number #1 in Europe, US and Asia for
+              targeted SMM services. Top 10 SMM supplier worldwide!
             </p>
             <div className="mb-8 flex flex-wrap gap-4">
               <div className="flex items-center space-x-2">
@@ -84,101 +85,7 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          <div className="rounded-2xl bg-white/10 p-8 backdrop-blur-sm">
-            <h3 className="mb-6 text-center text-2xl font-semibold">
-              Sign In to Your Account
-            </h3>
-            <Form {...form}>
-              <form
-                // @ts-ignore
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6"
-              >
-                <FormField
-                  // @ts-ignore
-                  control={form.control}
-                  name="username"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-white">Username</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          placeholder="Enter your username"
-                          className="border-white/30 bg-white/20 text-white placeholder-white/70 focus:ring-white/50"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  // @ts-ignore
-                  control={form.control}
-                  name="password"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-white">Password</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          type="password"
-                          placeholder="Enter your password"
-                          className="border-white/30 bg-white/20 text-white placeholder-white/70 focus:ring-white/50"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <div className="flex items-center justify-between">
-                  <FormField
-                    // @ts-ignore
-                    control={form.control}
-                    name="rememberMe"
-                    render={({ field }) => (
-                      <FormItem className="flex items-center space-x-2">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                          />
-                        </FormControl>
-                        <FormLabel className="text-sm text-white">
-                          Remember me
-                        </FormLabel>
-                      </FormItem>
-                    )}
-                  />
-                  <Button
-                    variant="link"
-                    className="p-0 text-sm text-yellow-300 hover:text-yellow-200"
-                  >
-                    Forgot password?
-                  </Button>
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-yellow-400 py-3 font-semibold text-blue-900 hover:bg-yellow-300"
-                >
-                  Sign In
-                </Button>
-
-                <p className="text-center text-sm">
-                  Don't have an account?{" "}
-                  <Button
-                    variant="link"
-                    className="p-0 text-yellow-300 hover:text-yellow-200"
-                  >
-                    Sign up
-                  </Button>
-                </p>
-              </form>
-            </Form>
-          </div>
+          {children}
         </div>
       </div>
       <svg

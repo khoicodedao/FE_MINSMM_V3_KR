@@ -12,9 +12,9 @@ export default function VideoSection() {
             Check our SMM Panel Video Guide
           </h3>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            Urpanel's SMM panel is designed to provide a smooth and
-            straightforward experience for anyone looking to enhance their
-            social media presence.
+            SMM's SMM panel is designed to provide a smooth and straightforward
+            experience for anyone looking to enhance their social media
+            presence.
           </p>
         </div>
 
@@ -23,7 +23,7 @@ export default function VideoSection() {
             <div className="aspect-w-16 aspect-h-9">
               <iframe
                 src="https://www.youtube.com/embed/abKh0_Xz-BU?controls=1"
-                title="Urpanel SMM Panel Video Guide"
+                title="SMM SMM Panel Video Guide"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -35,8 +35,8 @@ export default function VideoSection() {
 
         <div className="mt-12 text-center">
           <p className="mb-4 text-2xl font-semibold text-gray-800">
-            <strong>Urpanel</strong> is the{" "}
-            <strong>#1 Social Media Panel</strong> in the world! 🌍
+            <strong>SMM</strong> is the <strong>#1 Social Media Panel</strong>{" "}
+            in the world! 🌍
           </p>
           <p className="mb-8 text-xl text-gray-600">
             What are you waiting for?

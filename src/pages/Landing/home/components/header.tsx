@@ -21,7 +21,7 @@ export default function Header() {
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
               <Rocket className="text-lg text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-800">Urpanel</span>
+            <span className="text-2xl font-bold text-gray-800">SMM</span>
           </div>
 
           <div className="hidden items-center space-x-8 md:flex">

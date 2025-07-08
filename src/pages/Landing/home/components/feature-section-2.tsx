@@ -6,28 +6,28 @@ export default function FeatureSection() {
       icon: Megaphone,
       title: "#1 SMM Panel Provider",
       description:
-        "When it comes to SMM platforms, Urpanel is easily in the top ten targeted service providers worldwide.",
+        "When it comes to SMM platforms, SMM is easily in the top ten targeted service providers worldwide.",
       color: "from-pink-500 to-red-500",
     },
     {
       icon: DollarSign,
       title: "Cheapest SMM Panel",
       description:
-        "Urpanel offers authentic services at industry-low prices. Cheap prices but with the quality insurance.",
+        "SMM offers authentic services at industry-low prices. Cheap prices but with the quality insurance.",
       color: "from-yellow-400 to-yellow-600",
     },
     {
       icon: Target,
       title: "SMM Targeted Services",
       description:
-        "On Urpanel, you will discover the best targeted SMM services available for Instagram and others SM.",
+        "On SMM, you will discover the best targeted SMM services available for Instagram and others SM.",
       color: "from-blue-500 to-indigo-600",
     },
     {
       icon: MessageCircle,
       title: "24/7 Customer Service",
       description:
-        "Urpanel's customer service is available 24 hours a day, seven days a week.",
+        "SMM's customer service is available 24 hours a day, seven days a week.",
       color: "from-green-400 to-teal-500",
     },
   ];

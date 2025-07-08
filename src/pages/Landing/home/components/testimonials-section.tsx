@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
           What Our Customers Are Saying
         </h2>
         <p className="mx-auto mb-12 max-w-3xl text-gray-600">
-          At Urpanel, we take pride in the success stories of our clients. From
+          At SMM, we take pride in the success stories of our clients. From
           influencers to small business owners, our customers have experienced
           significant growth in their social media presence by using our
           high-quality SMM services.

@@ -72,7 +72,7 @@ export default function ServicesSection() {
             Cheap SMM Provider of Targeted Services
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            Urpanel offers more than 2000 different services for all social
+            SMM offers more than 2000 different services for all social
             platforms, designed to boost your social media presence.
           </p>
         </div>

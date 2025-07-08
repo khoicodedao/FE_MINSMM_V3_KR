@@ -3,7 +3,7 @@ const steps = [
     number: 1,
     title: "Create an Account",
     description:
-      "Sign up for an account on Urpanel. The registration process is quick and user-friendly.",
+      "Sign up for an account on SMM. The registration process is quick and user-friendly.",
   },
   {
     number: 2,
@@ -31,7 +31,7 @@ export default function HowItWorksSection() {
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-800">
-            How Urpanel SMM Panel Works?
+            How SMM Panel Works?
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
             SMM panels are software companies working as intermediaries between
