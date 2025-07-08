@@ -1,0 +1,33 @@
+.signup-form-container {
+    width: 720px;
+    padding: 24px;
+    background: #fff;
+    border-radius: 10px;
+
+    @media (max-width: 900px){
+        width: 400px;
+    }
+
+    @media (max-width: 500px){
+        width: 200px;
+    }
+
+    .ant-input-affix-wrapper {
+        background: rgb(228, 225, 238);
+
+        .ant-form-item-no-colon {
+            span {
+                opacity: 1;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .submit-button {
+        background: rgb(31, 11, 108) !important;
+    }
+
+    .submit-button:hover {
+        background: rgb(31, 11, 108, 0.8) !important;
+    }
+}

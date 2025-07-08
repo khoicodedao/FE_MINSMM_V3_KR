@@ -1,0 +1,45 @@
+.login-form-container {
+    width: 720px;
+    padding: 24px;
+    background: #fff;
+    border-radius: 14px;
+
+    @media (max-width: 900px){
+        width: 400px;
+    }
+
+    @media (max-width: 500px){
+        width: 200px;
+    }
+
+    .ant-input-affix-wrapper {
+        background: rgb(228, 225, 238);
+
+        .ant-form-item-no-colon {
+            span {
+                opacity: 1;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .submit-button {
+        background: rgb(31, 11, 108) !important;
+    }
+
+    .submit-button:hover {
+        background: rgb(31, 11, 108, 0.8) !important;
+    }
+}
+
+input:-webkit-autofill {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 1000px #e4e1ee inset !important;
+  border: none !important;
+  -webkit-box-shadow: 0 0 0px 1000px #e4e1ee inset !important; 
+  outline: none !important;
+}
+
+.ant-collapse-header-text {
+    max-width: 80% !important;
+}

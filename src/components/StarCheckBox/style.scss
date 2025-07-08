@@ -1,0 +1,32 @@
+.star-checkbox-container {
+    display: inline-block;
+    position: relative;
+
+    .star-input {
+        display: none;
+    }
+
+    .star-label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        clip-path: polygon(50% 0%,
+                61% 35%,
+                98% 35%,
+                68% 57%,
+                79% 91%,
+                50% 70%,
+                21% 91%,
+                32% 57%,
+                2% 35%,
+                39% 35%);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 2px solid gold;
+    }
+
+    .star-input:checked+.star-label {
+        background-color: gold;
+    }
+}

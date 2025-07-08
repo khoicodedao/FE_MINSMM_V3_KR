@@ -1,0 +1,49 @@
+.service-page {
+  // Only for search
+  .search-tour {
+    .ant-form-inline .ant-form-item {
+      margin-inline-end: 0px !important;
+    }
+    .ant-select-single .ant-select-selector {
+      border-radius: 0px !important;
+    }
+  }
+
+  .ant-table-content {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+  }
+  
+  .ant-table-content::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+  }
+  
+  .ant-table-content::-webkit-scrollbar-track {
+    background-color: #e1e6e6;
+  }
+  
+  .ant-table-content::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #2CA58D;
+  }
+
+  .ant-collapse-content-box {
+    padding: 0px !important;
+    padding-top: 0.5rem !important;
+  }
+  
+  .ant-collapse-header {
+    background-color: #FFF2F7 !important;
+    color: white !important;
+    border-radius: 0.625rem !important;
+    align-items: center !important;
+  }
+  .ant-collapse-header-text, .ant-collapse-header-text article {
+    color: #000000 !important;
+    align-items: center !important;
+  }
+  .ant-space-item, .ant-space-item article {
+    color: #000000 !important;
+  }
+}

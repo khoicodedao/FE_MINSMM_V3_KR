@@ -1,0 +1,31 @@
+.title-container {
+    margin-bottom: 24px;
+
+    .title-cart {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .item-count {}
+
+    .item-count-container {
+        border-radius: 12px;
+        padding: 4px 16px;
+        background: rgb(93, 135, 255);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.costLabel {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.costText {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+}

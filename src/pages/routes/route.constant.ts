@@ -1,0 +1,17 @@
+export const NEW_ORDER = "/client/new_order";
+export const SERVICES = "/client/services";
+export const AFFILIATES = "/client/affiliates";
+export const ORDERS = "/client/orders";
+export const ADD_FUNDS = "/client/add_funds";
+export const API = "/client/api";
+export const MASS_ORDER = "/client/mass_order";
+export const TICKETS = "/client/tickets";
+export const LOGIN = "/";
+export const ACCOUNT_SETTING = "/client/account_setting";
+export const DEFAULT = "/";
+export const NOT_FOUND = "*";
+export const CONTACT = "/client/contact";
+export const SERVICE_LANDING = "services";
+export const PLANS = "/client/plans";
+export const CHILD_PANEL = "/client/child_panel";
+export const API_LANDING = "api";

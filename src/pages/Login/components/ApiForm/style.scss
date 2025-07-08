@@ -1,0 +1,24 @@
+.api-form-container{
+    width: 720px;
+    padding: 24px;
+    background: #fff;
+    border-radius: 10px;
+
+    @media (max-width: 900px){
+        width: 400px;
+    }
+
+    @media (max-width: 500px){
+        width: 200px;
+    }
+    .api-title{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .json-container{
+        padding: 10px;
+        background: #DEEFF5;
+        margin-top: 8px;
+        border-radius: 6px;
+    }
+}

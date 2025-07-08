@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+    .responsive-table {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .responsive-table .card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .responsive-table .card .card-item {
+      margin-bottom: 8px;
+    }
+  
+    .responsive-table .card .card-item span {
+      font-weight: bold;
+      margin-right: 8px;
+    }
+  
+    .responsive-table .card .view-button {
+      margin-top: 12px;
+      display: inline-block;
+      background-color: #ea1261;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .responsive-table .card .view-button:hover {
+      background-color: #d0105a;
+    }
+    
+  }

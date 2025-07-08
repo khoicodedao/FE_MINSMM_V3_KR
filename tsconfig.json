@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext", "es2015"],
+    "allowJs": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "custom.d.ts", "src/react-i18next.d.ts"],
+  "exclude": ["src/pages/**/*"]
+}

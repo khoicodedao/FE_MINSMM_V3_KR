@@ -1,0 +1,24 @@
+/* style.scss */
+.tickets-page {
+  width: 100%;
+  transition: width 0.3s;
+
+  .search-tour {
+    .ant-form-inline .ant-form-item {
+      margin-inline-end: 0px !important;
+    }
+    .ant-select-single .ant-select-selector {
+      border-radius: 0px;
+    }
+  }
+  
+  .highlight-row {
+    background-color: #E6F4F1 !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ticket-active {
+    width: 50% !important;
+  }
+}

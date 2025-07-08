@@ -1,0 +1,42 @@
+.mass-order-page {
+    .page-container {
+        display: flex;
+        justify-content: center;
+
+        .page-content {
+            background-color: #ADD8E6;
+            width: 100%;
+            height: calc(100vh - 134px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            padding-top: 20px;
+
+            .form-submit-container {
+                height: 300px;
+                padding: 20px;
+                width: 800px;
+                border: 2px solid #d3d3d3;
+                border-radius: 9px;
+                background-color: #ffffff;
+
+                @media (max-width: 1200px) {
+                    width: 600px;
+                }
+
+                @media (max-width: 700px) {
+                    width: 400px;
+                }
+
+                @media (max-width: 500px) {
+                    width: 300px;
+                }
+
+                @media (max-width: 400px) {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
