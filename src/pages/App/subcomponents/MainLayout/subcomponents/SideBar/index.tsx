@@ -62,7 +62,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
 
   const navItemsData: NavItem[] = [
     { to: NEW_ORDER, label: t("newOrder"), icon: "new-order" },
-    { to: SERVICES, label: t("services"), icon: "service" },
+    { to: SERVICES, label: t("services_title"), icon: "service" },
     { to: ORDERS, label: t("orders"), icon: "orders" },
     { to: ADD_FUNDS, label: t("addFunds"), icon: "add-fund" },
     { to: AFFILIATES, label: t("affiliates"), icon: "affiliate" },

@@ -68,7 +68,7 @@ const ServiceContainer = () => {
     <div className="mx-auto w-full max-w-[95%] sm:max-w-[80%] xl:max-w-[1200px]">
       <div className="services-page page rounded-2xl">
         <div className="page-header rounded-t-2xl">
-          <p className="pl-4">{t("services")}</p>
+          <p className="pl-4">{t("services_title")}</p>
         </div>
         <div className="page-container">
           <div className="page-content">

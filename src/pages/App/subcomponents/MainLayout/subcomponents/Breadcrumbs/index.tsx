@@ -17,7 +17,7 @@ const Breadcrumbs = () => {
     // @ts-ignore
     "/client/new_order": t("newOrder"),
     // @ts-ignore
-    "/client/services": t("services"),
+    "/client/services": t("services_title"),
     // @ts-ignore
     "/client/orders": t("orders"),
     // @ts-ignore

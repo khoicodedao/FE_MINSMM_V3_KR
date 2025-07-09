@@ -107,7 +107,7 @@ const Services = () => {
 
   return (
     <div className="p-6">
-      <h1 className="mb-6 text-2xl font-bold">{t("services")}</h1>
+      <h1 className="mb-6 text-2xl font-bold">{t("services_title")}</h1>
       <div className="service-page max-w max-w-[90vw] rounded-xl bg-white p-6 shadow-md sm:p-6">
         <form
           onSubmit={formik.handleSubmit}

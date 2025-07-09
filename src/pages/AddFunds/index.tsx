@@ -227,7 +227,7 @@ const AddFunds = () => {
       } else {
         message.error(response.data.error.message || t("failedToAddPayment"));
       }
-    } else if (selectedMethod?.type === PAYMENT_METHOD_TYPE.BANK_TH.value) {
+    } else if (selectedMethod?.type === PAYMENT_METHOD_TYPE.BANK_KR.value) {
       const response = await paymentAPI.create(
         {
           money: values.usdAmount,
@@ -418,7 +418,7 @@ const AddFunds = () => {
                         exchangeRate={selectedPaymentMethod?.rate || 25000}
                       />
                     ) : selectedPaymentMethod?.type ===
-                      PAYMENT_METHOD_TYPE.BANK_TH.value ? (
+                      PAYMENT_METHOD_TYPE.BANK_KR.value ? (
                       <QRAmountTH
                         exchangeRate={selectedPaymentMethod?.rate || 10000}
                       />
