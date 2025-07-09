@@ -206,7 +206,7 @@ const NewOrder = () => {
 
   return (
     <div className="p-6">
-      <h4 className="mb-6 text-2xl font-bold text-black">New order</h4>
+      <h4 className="mb-6 text-2xl font-bold text-black">{t("newOrder")}</h4>
       <div className="mb-6 flex flex-col gap-6 md:flex-row">
         {/* Left Column - 8/12 width (66.67%) */}
         {/* Show on desktop */}

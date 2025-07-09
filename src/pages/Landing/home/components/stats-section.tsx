@@ -1,8 +1,12 @@
 import { useRef } from "react";
 import { useCounterAnimation } from "../hooks/use-counter-animation";
 import { Cog, ShoppingCart, Users } from "lucide-react";
+// @ts-ignore
+import { useTranslation } from "react-i18next";
 
 export default function StatsSection() {
+  const { t } = useTranslation();
+
   const totalServicesRef = useRef<HTMLDivElement>(null);
   const ordersTodayRef = useRef<HTMLDivElement>(null);
   const usersTodayRef = useRef<HTMLDivElement>(null);
@@ -25,7 +29,7 @@ export default function StatsSection() {
               >
                 {totalServices.toLocaleString()}
               </div>
-              <div className="text-gray-600">Total Services</div>
+              <div className="text-gray-600">{t("stats.totalServices")}</div>
             </div>
           </div>
 
@@ -39,7 +43,7 @@ export default function StatsSection() {
               >
                 {ordersToday.toLocaleString()}
               </div>
-              <div className="text-gray-600">Orders Today</div>
+              <div className="text-gray-600">{t("stats.ordersToday")}</div>
             </div>
           </div>
 
@@ -53,7 +57,7 @@ export default function StatsSection() {
               >
                 {usersToday.toLocaleString()}
               </div>
-              <div className="text-gray-600">Users Today</div>
+              <div className="text-gray-600">{t("stats.usersToday")}</div>
             </div>
           </div>
         </div>

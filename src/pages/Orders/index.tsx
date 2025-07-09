@@ -263,7 +263,7 @@ const Orders: React.FC = () => {
       key: "charge",
       width: 100,
       render: (value: number) =>
-        `${Number(value).toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 10, })}`,
+        `${Number(value).toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 10 })}`,
     },
     {
       title: t("startCount"),
@@ -415,7 +415,7 @@ const Orders: React.FC = () => {
         maxWidth: window.innerWidth > 768 ? "calc(100vw - 280px)" : "100vw",
       }}
     >
-      <h1 className="mb-6 text-2xl font-bold">Orders</h1>
+      <h1 className="mb-6 text-2xl font-bold">{t("orders")}</h1>
 
       <div className="mb-4 rounded-lg bg-white p-4 shadow-md">
         {isMobile ? (

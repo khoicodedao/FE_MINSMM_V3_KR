@@ -10,6 +10,8 @@ import {
   Typography,
   Drawer,
   Button as AntButton,
+  Menu,
+  Dropdown,
 } from "antd";
 import {
   MailOutlined,
@@ -25,6 +27,11 @@ import { useDispatch } from "react-redux";
 import { login } from "pages/App/store/appSlice";
 import { LOCAL_STORAGE_KEY, TYPE_FIELD } from "constants/enums";
 import { MESSAGE } from "constants/message";
+import Korea from "assets/images/svg/korea.svg";
+import English from "assets/images/svg/unitedstates.svg";
+//@ts-ignore
+import { useTranslation } from "react-i18next";
+
 interface NavbarLandingProps {
   seoData?: any;
 }
@@ -32,7 +39,30 @@ interface NavbarLandingProps {
 const NavbarLanding: React.FC<NavbarLandingProps> = ({ seoData }) => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const { t, i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setCurrentLanguage(lng);
+  };
+
+  const languageMenu = (
+    <Menu>
+      <Menu.Item key="kr" onClick={() => changeLanguage("kr")}>
+        <div className="flex items-center justify-stretch gap-1">
+          <img src={Korea} alt="Korea" width={24} height={24} />
+          <p>Korea</p>
+        </div>
+      </Menu.Item>
+      <Menu.Item key="en" onClick={() => changeLanguage("en")}>
+        <div className="flex items-center justify-stretch gap-1">
+          <img src={English} alt="English" width={24} height={24} />
+          <p>English</p>
+        </div>
+      </Menu.Item>
+    </Menu>
+  );
   const [isDrawerVisible, setDrawerVisible] = useState(false);
 
   const isActive = (path: string) => {
@@ -87,6 +117,20 @@ const NavbarLanding: React.FC<NavbarLandingProps> = ({ seoData }) => {
             }
           />
         </div>
+        <Dropdown
+          className="hidden md:block"
+          overlay={languageMenu}
+          trigger={["click"]}
+        >
+          <Button className="border-none bg-transparent">
+            <img
+              src={currentLanguage === "kr" ? Korea : English}
+              alt="Language"
+              width={24}
+              height={24}
+            />
+          </Button>
+        </Dropdown>
       </div>
 
       {/* Button to show drawer */}

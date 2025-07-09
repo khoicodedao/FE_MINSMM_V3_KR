@@ -144,7 +144,7 @@ const Affiliates = () => {
 
   return (
     <div className="p-6">
-      <h1 className="mb-6 text-2xl font-bold">Affiliate</h1>
+      <h1 className="mb-6 text-2xl font-bold">{t("affiliate")}</h1>
 
       <div className="flex-1 overflow-y-auto">
         <div className="relative mb-4 overflow-hidden rounded-lg bg-white p-6 shadow-md">
@@ -212,8 +212,7 @@ const Affiliates = () => {
               </svg>
             </div>
             <p className="text-base text-[#212121]">
-              Payment through: Directly add to panel account or transfer money
-              via bank account
+              {t("paymentHistoryDescription")}
             </p>
           </div>
         </div>
@@ -228,7 +227,7 @@ const Affiliates = () => {
                 <User className="h-6 w-6" />
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">User name</span>
+                <span className="text-sm text-[#666270]">{t("userName")}</span>
                 <span className="text-sm font-medium text-[#212121]">
                   {GetUserName()}
                 </span>
@@ -241,7 +240,9 @@ const Affiliates = () => {
                 <Link className="h-6 w-6" />
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Referral Link</span>
+                <span className="text-sm text-[#666270]">
+                  {t("referalLink")}
+                </span>
                 <span
                   className="text-sm font-medium text-[#212121]"
                   onClick={() =>
@@ -262,7 +263,9 @@ const Affiliates = () => {
                 <DollarSign className="h-6 w-6" />
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Commission rate</span>
+                <span className="text-sm text-[#666270]">
+                  {t("commissionRate")}
+                </span>
                 <span className="text-sm font-medium text-[#212121]">{`${commissionRate}%`}</span>
               </div>
             </div>

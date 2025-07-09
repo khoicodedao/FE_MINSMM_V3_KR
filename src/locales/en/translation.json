@@ -3,6 +3,7 @@
   "accountSetting": "Account setting",
   "newOrder": "New Order",
   "services": "Services",
+  "deposit": "Deposit",
   "orders": "Orders",
   "addFunds": "Add funds",
   "api": "API",
@@ -151,5 +152,262 @@
 "balanceSpent": "Balance spent",
 "totalOrder": "Total order",
 "orderHistory": "Order history",
-"orderHistoryDescription": "View your order history and track the status of your orders."
+"orderHistoryDescription": "View your order history and track the status of your orders.",
+"accountBalance": "Account balance",
+"view": "View",
+"affiliate": "Affiliate",
+"apiDocument": "API Document",
+"depositFundsToYourWallet": "Deposit funds to your wallet",
+"paymentHistory": "Payment history",
+"paymentHistoryDescription": "Payment through: Directly add to panel account or transfer money via bank account",
+"userName": "User name",
+"referalLink": "Referral link",
+"hero": {
+    "title": "SMM Panel #1 for Targeted No-Drop Services",
+    "description": "SMM Panel is the provider number #1 in Europe, US and Asia for targeted SMM services. Top 10 SMM supplier worldwide!",
+    "countries": {
+      "italy": "Italy",
+      "germany": "Germany",
+      "spain": "Spain",
+      "usa": "USA",
+      "japan": "Japan"
+    },
+    "cta": "Get Started Now 🚀"
+  },
+   "stats": {
+    "totalServices": "Total Services",
+    "ordersToday": "Orders Today",
+    "usersToday": "Users Today"
+  },
+ "home_landing": {
+    "welcome": "Welcome To Supreme SMM! Please Enter Your Login Credentials Below To Access Your Account.",
+    "usernamePlaceholder": "Enter your username",
+    "passwordPlaceholder": "Enter your password",
+    "signIn": "Sign In",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "forgotPasswordTitle": "Forgot password",
+    "noAccount": "Don't have an account?"
+  },
+  "features": {
+    "heading": "Why Choose SMM SMM?",
+    "subheading": "SMM is the top choice for SMM Targeted services worldwide, as it's the main supplier for Instagram Targeted Followers, Likes and comments.",
+    "leaderTitle": "Leader in SMM Targeted Services",
+    "leaderDesc": "We are trusted by thousands of clients worldwide as the #1 SMM Panel Provider of targeted services.",
+    "qualityTitle": "High-Quality Social Media Growth",
+    "qualityDesc": "We offer real, high-quality followers, likes, views, and comments that resonate with your content.",
+    "noDropTitle": "No-Drop, Guaranteed Services",
+    "noDropDesc": "We offer no-drop services with a guarantee of stability and immediate refill policy.",
+    "cheapestTitle": "Cheapest SMM Pricing",
+    "cheapestDesc": "We offer competitive pricing without compromising quality, accessible to everyone.",
+    "quickTitle": "Quick and Reliable Delivery",
+    "quickDesc": "Fast delivery with results starting almost immediately. Our system works 24/7.",
+    "supportTitle": "24/7 Customer Support",
+    "supportDesc": "Our dedicated support team is available 24/7 to assist you with any queries or issues."
+  },
+  "howItWorks": {
+    "heading": "How SMM Panel Works?",
+    "subheading": "SMM panels are software companies working as intermediaries between users and social media platforms.",
+    "steps": {
+      "1": {
+        "title": "Create an Account",
+        "desc": "Sign up for an account on SMM. The registration process is quick and user-friendly."
+      },
+      "2": {
+        "title": "Deposit Funds",
+        "desc": "Add funds to your balance using credit cards, PayPal, cryptocurrencies, and more payment methods."
+      },
+      "3": {
+        "title": "Select a Service",
+        "desc": "Navigate to our service catalog and select the service that best fits your social media needs."
+      },
+      "4": {
+        "title": "Guaranteed Results",
+        "desc": "We deliver high-quality, reliable results with no-drop guarantees and refill options."
+      }
+    }
+  },
+  "services": {
+    "heading": "Cheap SMM Provider of Targeted Services",
+    "subheading": "SMM offers more than 2000 different services for all social platforms, designed to boost your social media presence.",
+    "instagram": {
+      "title": "Instagram SMM Panel",
+      "description": "Buy real targeted followers, likes, comments, and views to enhance your Instagram presence.",
+      "features": [
+        "Real targeted followers",
+        "High-quality likes & comments",
+        "Video views boost"
+      ]
+    },
+    "twitch": {
+      "title": "Twitch SMM Panel",
+      "description": "Boost your Twitch channel with real followers, views, and engagement for streamers.",
+      "features": [
+        "Increase Twitch followers",
+        "Boost live stream views",
+        "Channel subscriptions"
+      ]
+    },
+    "spotify": {
+      "title": "Spotify SMM Panel",
+      "description": "Grow your music career with authentic Spotify plays, followers, and playlist placements.",
+      "features": [
+        "Increase plays & followers",
+        "Playlist placement",
+        "Chart positioning"
+      ]
+    },
+    "youtube": {
+      "title": "YouTube SMM Panel",
+      "description": "Accelerate your YouTube growth with subscribers, views, and watch time services.",
+      "features": [
+        "Real subscribers & views",
+        "Watch time boost",
+        "Monetization support"
+      ]
+    },
+    "tiktok": {
+      "title": "TikTok SMM Panel",
+      "description": "Viral TikTok growth with real followers, likes, and views to maximize your content reach.",
+      "features": [
+        "Real TikTok followers",
+        "Viral video views",
+        "Engagement boost"
+      ]
+    },
+    "facebook": {
+      "title": "Facebook SMM Panel",
+      "description": "Build your Facebook business page with real likes, shares, and targeted engagement.",
+      "features": [
+        "Page likes & followers",
+        "Post engagement",
+        "Video views"
+      ]
+    }
+  },
+   "videoSection": {
+    "heading": "Need Further Help?",
+    "subheading": "Check our SMM Panel Video Guide",
+    "description": "SMM's SMM panel is designed to provide a smooth and straightforward experience for anyone looking to enhance their social media presence.",
+    "footer1": "SMM is the #1 Social Media Panel in the world! 🌍",
+    "footer2": "What are you waiting for?",
+    "button": "Get Started Now 🚀"
+  },
+  "featureSection": {
+    "features": [
+      {
+        "title": "#1 SMM Panel Provider",
+        "description": "When it comes to SMM platforms, SMM is easily in the top ten targeted service providers worldwide."
+      },
+      {
+        "title": "Cheapest SMM Panel",
+        "description": "SMM offers authentic services at industry-low prices. Cheap prices but with the quality insurance."
+      },
+      {
+        "title": "SMM Targeted Services",
+        "description": "On SMM, you will discover the best targeted SMM services available for Instagram and others SM."
+      },
+      {
+        "title": "24/7 Customer Service",
+        "description": "SMM's customer service is available 24 hours a day, seven days a week."
+      }
+    ]
+  },
+   "paymentSection": {
+    "heading": "Flexible and Secure Payment Methods",
+    "subheading": "We offer various payment methods with bonus rewards to ensure convenient and secure transactions.",
+    "methods": [
+      {
+        "title": "Credit & Debit Cards",
+        "description": "Visa, Mastercard, American Express",
+        "bonus": "1% Bonus"
+      },
+      {
+        "title": "PayPal",
+        "description": "For trusted users only",
+        "bonus": "No Bonus"
+      },
+      {
+        "title": "Cryptocurrencies",
+        "description": "Bitcoin, Ethereum, USDT, Litecoin",
+        "bonus": "3% Bonus"
+      },
+      {
+        "title": "Payeer",
+        "description": "Fast e-wallet system",
+        "bonus": "3% Bonus"
+      },
+      {
+        "title": "Perfect Money",
+        "description": "International transactions",
+        "bonus": "2% Bonus"
+      },
+      {
+        "title": "Other Methods",
+        "description": "Bank, Alipay, WeChat Pay",
+        "bonus": "Contact Us"
+      }
+    ]
+  },
+  "ctaSection": {
+    "heading": "Ready to Boost Your Social Media?",
+    "subheading": "Join thousands of satisfied customers and start growing your social media presence today with our targeted, no-drop services.",
+    "register": "Register Now & Get FREE Trial",
+    "viewServices": "View All Services"
+  },
+   "faq": {
+    "title": "Got More Questions?",
+    "description": "If you need further help, feel free to contact our 24/7 customer support team. We’re here to help!",
+    "button": "Get Started Now 🚀",
+    "questions": [
+      {
+        "q": "What is the purpose of SMM Panel?",
+        "a": "SMM panels help you grow social media accounts by providing likes, followers, comments, and more at affordable rates."
+      },
+      {
+        "q": "What types of SMM services do you provide?",
+        "a": "We offer targeted followers, likes, views, comments, and more across platforms like Instagram, TikTok, YouTube, and Facebook."
+      },
+      {
+        "q": "Are Drip-Feed Services Safe for All Platforms?",
+        "a": "Yes, our drip-feed services are optimized to simulate organic behavior and comply with platform limits."
+      },
+      {
+        "q": "How Do Mass Orders Work?",
+        "a": "Mass orders allow you to place bulk service orders using a single form, saving time and effort."
+      },
+      {
+        "q": "How Can I Place Orders via API?",
+        "a": "You can use our documented API to automate orders. It's available in your dashboard after login."
+      },
+      {
+        "q": "How Long Does It Take to See Results?",
+        "a": "Most services begin within minutes of ordering, but timing may vary based on service type and volume."
+      }
+    ]
+  },
+   "testimonials": {
+    "title": "What Our Customers Are Saying",
+    "description": "At SMM, we take pride in the success stories of our clients. From influencers to small business owners, our customers have experienced significant growth in their social media presence by using our high-quality SMM services.",
+    "items": [
+      {
+        "name": "Marco R.",
+        "text": "The service is affordable, and the results are better than expected. Recommended especially for the free initial balance."
+      },
+      {
+        "name": "Devesh Marnan",
+        "text": "Now I'm able to save much more time (and money!) while expanding my own panel. Thank you!!"
+      },
+      {
+        "name": "Sarah K.",
+        "text": "My Instagram account gained real followers quickly. Very satisfied with the quality and speed."
+      },
+      {
+        "name": "Liam P.",
+        "text": "Customer support is fast and helpful. The services really helped boost my brand’s visibility."
+      }
+    ]
+  }
+  
+
 }

@@ -1,41 +1,41 @@
-const steps = [
-  {
-    number: 1,
-    title: "Create an Account",
-    description:
-      "Sign up for an account on SMM. The registration process is quick and user-friendly.",
-  },
-  {
-    number: 2,
-    title: "Deposit Funds",
-    description:
-      "Add funds to your balance using credit cards, PayPal, cryptocurrencies, and more payment methods.",
-  },
-  {
-    number: 3,
-    title: "Select a Service",
-    description:
-      "Navigate to our service catalog and select the service that best fits your social media needs.",
-  },
-  {
-    number: 4,
-    title: "Guaranteed Results",
-    description:
-      "We deliver high-quality, reliable results with no-drop guarantees and refill options.",
-  },
-];
+//@ts-ignore
+import { useTranslation } from "react-i18next";
 
 export default function HowItWorksSection() {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      number: 1,
+      title: t("howItWorks.steps.1.title"),
+      description: t("howItWorks.steps.1.desc"),
+    },
+    {
+      number: 2,
+      title: t("howItWorks.steps.2.title"),
+      description: t("howItWorks.steps.2.desc"),
+    },
+    {
+      number: 3,
+      title: t("howItWorks.steps.3.title"),
+      description: t("howItWorks.steps.3.desc"),
+    },
+    {
+      number: 4,
+      title: t("howItWorks.steps.4.title"),
+      description: t("howItWorks.steps.4.desc"),
+    },
+  ];
+
   return (
     <section className="bg-gray-50 py-20" id="how-it-works">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-800">
-            How SMM Panel Works?
+            {t("howItWorks.heading")}
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            SMM panels are software companies working as intermediaries between
-            users and social media platforms.
+            {t("howItWorks.subheading")}
           </p>
         </div>
 

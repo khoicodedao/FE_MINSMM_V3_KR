@@ -1,15 +1,13 @@
 import { useState } from "react";
 import "./style.scss";
 import { Drawer, Avatar, Button, Dropdown, Menu, Popover } from "antd";
-import Thailan from "assets/images/svg/thailan.svg";
+import Korea from "assets/images/svg/korea.svg";
 import English from "assets/images/svg/unitedstates.svg";
-import Logo from "assets/LogoSystem/logo-mobile.svg";
 import { RootState } from "configs/configureStore";
 //@ts-ignore
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { useMediaQuery } from "react-responsive";
-import Icons from "assets/icons";
 import "pages/App/subcomponents/MainLayout/subcomponents/HeaderLayout/style.scss";
 import InforPopover from "pages/App/subcomponents/MainLayout/subcomponents/InforPopover";
 import Sidebar from "../SideBar";
@@ -39,16 +37,16 @@ const Navbar = ({ seoData }: any) => {
 
   const languageMenu = (
     <Menu>
+      <Menu.Item key="kr" onClick={() => changeLanguage("kr")}>
+        <div className="flex items-center justify-stretch gap-1">
+          <img src={Korea} alt="Korea" width={24} height={24} />
+          <p>Korea</p>
+        </div>
+      </Menu.Item>
       <Menu.Item key="en" onClick={() => changeLanguage("en")}>
         <div className="flex items-center justify-stretch gap-1">
           <img src={English} alt="English" width={24} height={24} />
           <p>English</p>
-        </div>
-      </Menu.Item>
-      <Menu.Item key="th" onClick={() => changeLanguage("th")}>
-        <div className="flex items-center justify-stretch gap-1">
-          <img src={Thailan} alt="Thai" width={24} height={24} />
-          <p>Thai</p>
         </div>
       </Menu.Item>
     </Menu>
@@ -116,7 +114,7 @@ const Navbar = ({ seoData }: any) => {
           >
             <Button className="border-none bg-transparent">
               <img
-                src={currentLanguage === "en" ? English : Thailan}
+                src={currentLanguage === "kr" ? Korea : English}
                 alt="Language"
                 width={24}
                 height={24}

@@ -18,6 +18,8 @@ import "pages/Login/components/ServicesForm/style.scss";
 const css = { xs: 24, sm: 24, md: 24, lg: 12, xl: 12 };
 
 const ServiceContainer = () => {
+  const { t } = useTranslation();
+
   const [serviceCategory, setServiceCategory] = useState<CategoryType[]>([]);
 
   const [isLoadingGetService, setIsLoadingGetService] = useState<boolean>(true);
@@ -66,7 +68,7 @@ const ServiceContainer = () => {
     <div className="mx-auto w-full max-w-[95%] sm:max-w-[80%] xl:max-w-[1200px]">
       <div className="services-page page rounded-2xl">
         <div className="page-header rounded-t-2xl">
-          <p className="pl-4">Services</p>
+          <p className="pl-4">{t("services")}</p>
         </div>
         <div className="page-container">
           <div className="page-content">
@@ -129,3 +131,6 @@ const ServiceContainer = () => {
 };
 
 export default ServiceContainer;
+function useTranslation(): { t: any; i18n: any } {
+  throw new Error("Function not implemented.");
+}

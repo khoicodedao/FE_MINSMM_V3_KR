@@ -1,22 +1,23 @@
 import { Button } from "../components/ui/button";
+// @ts-ignore
+import { useTranslation } from "react-i18next";
 
 export default function CTASection() {
+  const { t } = useTranslation();
+
   return (
     <section className="gradient-primary relative overflow-hidden py-20 text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="mb-4 text-4xl font-bold">
-          Ready to Boost Your Social Media?
-        </h2>
+        <h2 className="mb-4 text-4xl font-bold">{t("ctaSection.heading")}</h2>
         <p className="mx-auto mb-8 max-w-2xl text-xl">
-          Join thousands of satisfied customers and start growing your social
-          media presence today with our targeted, no-drop services.
+          {t("ctaSection.subheading")}
         </p>
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <Button className="bg-white px-8 py-4 text-lg font-semibold text-primary hover:bg-gray-100">
-            Register Now & Get FREE Trial
+            {t("ctaSection.register")}
           </Button>
           <Button className="border-2 border-white bg-transparent px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:text-primary">
-            View All Services
+            {t("ctaSection.viewServices")}
           </Button>
         </div>
       </div>

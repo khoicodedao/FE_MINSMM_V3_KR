@@ -1,79 +1,81 @@
-const services = [
-  {
-    title: "Instagram SMM Panel",
-    description:
-      "Buy real targeted followers, likes, comments, and views to enhance your Instagram presence.",
-    image: "https://storage.perfectcdn.com/567e76/f30k82nsxm8uqebr.png",
-    features: [
-      "Real targeted followers",
-      "High-quality likes & comments",
-      "Video views boost",
-    ],
-  },
-  {
-    title: "Twitch SMM Panel",
-    description:
-      "Boost your Twitch channel with real followers, views, and engagement for streamers.",
-    image: "https://storage.perfectcdn.com/567e76/xyehx4mxngegznco.png",
-    features: [
-      "Increase Twitch followers",
-      "Boost live stream views",
-      "Channel subscriptions",
-    ],
-  },
-  {
-    title: "Spotify SMM Panel",
-    description:
-      "Grow your music career with authentic Spotify plays, followers, and playlist placements.",
-    image: "https://storage.perfectcdn.com/567e76/6lta5db1r9d6qsqg.png",
-    features: [
-      "Increase plays & followers",
-      "Playlist placement",
-      "Chart positioning",
-    ],
-  },
-  {
-    title: "YouTube SMM Panel",
-    description:
-      "Accelerate your YouTube growth with subscribers, views, and watch time services.",
-    image: "https://storage.perfectcdn.com/567e76/q60ejzjl7efcbdc7.png",
-    features: [
-      "Real subscribers & views",
-      "Watch time boost",
-      "Monetization support",
-    ],
-  },
-  {
-    title: "TikTok SMM Panel",
-    description:
-      "Viral TikTok growth with real followers, likes, and views to maximize your content reach.",
-    image: "https://storage.perfectcdn.com/567e76/yhj8bmyn47fb0qr5.png",
-    features: [
-      "Real TikTok followers",
-      "Viral video views",
-      "Engagement boost",
-    ],
-  },
-  {
-    title: "Facebook SMM Panel",
-    description:
-      "Build your Facebook business page with real likes, shares, and targeted engagement.",
-    image: "https://storage.perfectcdn.com/567e76/a5su2kaxaulqij2c.png",
-    features: ["Page likes & followers", "Post engagement", "Video views"],
-  },
-];
+//@ts-ignore
+import { useTranslation } from "react-i18next";
 
 export default function ServicesSection() {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      title: t("services.instagram.title"),
+      description: t("services.instagram.description"),
+      image: "https://storage.perfectcdn.com/567e76/f30k82nsxm8uqebr.png",
+      features: [
+        t("services.instagram.features.0"),
+        t("services.instagram.features.1"),
+        t("services.instagram.features.2"),
+      ],
+    },
+    {
+      title: t("services.twitch.title"),
+      description: t("services.twitch.description"),
+      image: "https://storage.perfectcdn.com/567e76/xyehx4mxngegznco.png",
+      features: [
+        t("services.twitch.features.0"),
+        t("services.twitch.features.1"),
+        t("services.twitch.features.2"),
+      ],
+    },
+    {
+      title: t("services.spotify.title"),
+      description: t("services.spotify.description"),
+      image: "https://storage.perfectcdn.com/567e76/6lta5db1r9d6qsqg.png",
+      features: [
+        t("services.spotify.features.0"),
+        t("services.spotify.features.1"),
+        t("services.spotify.features.2"),
+      ],
+    },
+    {
+      title: t("services.youtube.title"),
+      description: t("services.youtube.description"),
+      image: "https://storage.perfectcdn.com/567e76/q60ejzjl7efcbdc7.png",
+      features: [
+        t("services.youtube.features.0"),
+        t("services.youtube.features.1"),
+        t("services.youtube.features.2"),
+      ],
+    },
+    {
+      title: t("services.tiktok.title"),
+      description: t("services.tiktok.description"),
+      image: "https://storage.perfectcdn.com/567e76/yhj8bmyn47fb0qr5.png",
+      features: [
+        t("services.tiktok.features.0"),
+        t("services.tiktok.features.1"),
+        t("services.tiktok.features.2"),
+      ],
+    },
+    {
+      title: t("services.facebook.title"),
+      description: t("services.facebook.description"),
+      image: "https://storage.perfectcdn.com/567e76/a5su2kaxaulqij2c.png",
+      features: [
+        t("services.facebook.features.0"),
+        t("services.facebook.features.1"),
+        t("services.facebook.features.2"),
+      ],
+    },
+  ];
+
   return (
     <section className="py-20" id="services">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-800">
-            Cheap SMM Provider of Targeted Services
+            {t("services.heading")}
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            SMM offers more than 2000 different services for all social
-            platforms, designed to boost your social media presence.
+            {t("services.subheading")}
           </p>
         </div>
 

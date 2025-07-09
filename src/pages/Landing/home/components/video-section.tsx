@@ -1,20 +1,22 @@
 import { Button } from "../components/ui/button";
+// @ts-ignore
+import { useTranslation } from "react-i18next";
 
 export default function VideoSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-800">
-            Need Further Help?
+            {t("videoSection.heading")}
           </h2>
           <h3 className="mb-4 text-2xl font-semibold text-primary">
-            Check our SMM Panel Video Guide
+            {t("videoSection.subheading")}
           </h3>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            SMM's SMM panel is designed to provide a smooth and straightforward
-            experience for anyone looking to enhance their social media
-            presence.
+            {t("videoSection.description")}
           </p>
         </div>
 
@@ -23,7 +25,7 @@ export default function VideoSection() {
             <div className="aspect-w-16 aspect-h-9">
               <iframe
                 src="https://www.youtube.com/embed/abKh0_Xz-BU?controls=1"
-                title="SMM SMM Panel Video Guide"
+                title="SMM Panel Video Guide"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -35,14 +37,13 @@ export default function VideoSection() {
 
         <div className="mt-12 text-center">
           <p className="mb-4 text-2xl font-semibold text-gray-800">
-            <strong>SMM</strong> is the <strong>#1 Social Media Panel</strong>{" "}
-            in the world! 🌍
+            <strong>SMM</strong> {t("videoSection.footer1")}
           </p>
           <p className="mb-8 text-xl text-gray-600">
-            What are you waiting for?
+            {t("videoSection.footer2")}
           </p>
           <Button className="bg-primary px-8 py-4 text-lg font-semibold text-white hover:bg-blue-600">
-            Get Started Now 🚀
+            {t("videoSection.button")}
           </Button>
         </div>
       </div>

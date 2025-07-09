@@ -40,9 +40,7 @@ const App = () => {
       dispatch(logout());
       localStorage.clear();
       navigate(LOGIN);
-      message.info(
-        "Your session has expired. Please sign in again to continue",
-      );
+      message.info("Please sign in again to continue");
     }
   }, [location.pathname]);
   const homeRoute = process.env.REACT_APP_HOME_PAGE_ROUTE || NEW_ORDER;

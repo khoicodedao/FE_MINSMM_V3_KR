@@ -16,7 +16,8 @@ import {
 } from "../components/ui/form";
 import { ReactNode } from "react";
 import { useToast } from "../hooks/use-toast";
-
+// @ts-ignore
+import { useTranslation } from "react-i18next";
 const loginSchema = z.object({
   username: z.string().min(1, "Username is required"),
   password: z.string().min(1, "Password is required"),
@@ -27,7 +28,7 @@ type LoginForm = z.infer<typeof loginSchema>;
 
 export default function HeroSection({ children }: { children?: ReactNode }) {
   const { toast } = useToast();
-
+  const { t } = useTranslation();
   const form = useForm<LoginForm>({
     // @ts-ignore
     resolver: zodResolver(loginSchema),
@@ -51,37 +52,27 @@ export default function HeroSection({ children }: { children?: ReactNode }) {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <h1 className="mb-6 text-5xl font-bold leading-tight">
-              SMM Panel <span className="text-yellow-300">#1</span> for Targeted
-              No-Drop Services
+              {t("hero.title")}
             </h1>
             <p className="mb-8 text-xl text-blue-100">
-              SMM Panel is the provider number #1 in Europe, US and Asia for
-              targeted SMM services. Top 10 SMM supplier worldwide!
+              {t("hero.description")}
             </p>
             <div className="mb-8 flex flex-wrap gap-4">
-              <div className="flex items-center space-x-2">
-                <span className="text-yellow-300">🇮🇹</span>
-                <span>Italy</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-yellow-300">🇩🇪</span>
-                <span>Germany</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-yellow-300">🇪🇸</span>
-                <span>Spain</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-yellow-300">🇺🇸</span>
-                <span>USA</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-yellow-300">🇯🇵</span>
-                <span>Japan</span>
-              </div>
+              {[
+                { flag: "🇮🇹", key: "italy" },
+                { flag: "🇩🇪", key: "germany" },
+                { flag: "🇪🇸", key: "spain" },
+                { flag: "🇺🇸", key: "usa" },
+                { flag: "🇯🇵", key: "japan" },
+              ].map((country) => (
+                <div key={country.key} className="flex items-center space-x-2">
+                  <span className="text-yellow-300">{country.flag}</span>
+                  <span>{t(`hero.countries.${country.key}`)}</span>
+                </div>
+              ))}
             </div>
             <Button className="bg-white px-8 py-4 text-lg font-semibold text-primary hover:bg-gray-100">
-              Get Started Now 🚀
+              {t("hero.cta")}
             </Button>
           </div>
 

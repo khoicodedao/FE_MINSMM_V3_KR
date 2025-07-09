@@ -75,159 +75,165 @@ const Api = () => {
 
   return (
     <div className="p-6">
-      <h1 className="mb-6 text-2xl font-bold">Api Document</h1>
+      <h1 className="mb-6 text-2xl font-bold">{t("apiDocument")}</h1>
 
       <div className="rounded-lg bg-white p-6">
-      <div className="text-[16px] font-bold">{t("apiDocs")}</div>
-      <RowComponent title="HTTP Method" content="POST" />
-      <RowComponent backgroundColor={lightBlue} title="API URL" content={url} />
-      <RowComponent
-        title="API Key"
-        content="Get an API key on the Account page"
-      />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="Response format"
-        content="JSON"
-      />
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("serviceList")}</div>
-      </Row>
-      <RowComponent title="Parameters" content="Description" header={true} />
-      <RowComponent title="key" content="Your API key" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="action"
-        content="services"
-      />
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
-      </Row>
-      <Row
-        className="json-container"
-        style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
-      >
-        {JSON.stringify(jsonData1, null, 3)}
-      </Row>
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("addOrder")}</div>
-      </Row>
-      <Row className="font-semibold">Default</Row>
-      <RowComponent title="Parameters" content="Description" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="key"
-        content="Your API key"
-      />
-      <RowComponent title="action" content="add" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="service"
-        content="Service ID"
-      />
-      <RowComponent title="link" content="Link to page" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="quantity"
-        content="Needed quantity"
-      />
-      <RowComponent title="runs (optional)" content="Runs to deliver" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="interval (optional)"
-        content="Interval in minutes"
-      />
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
-      </Row>
-      <Row
-        className="json-container"
-        style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
-      >
-        {JSON.stringify(jsonData2, null, 3)}
-      </Row>
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("orderStatus")}</div>
-      </Row>
-      <RowComponent title="Parameters" content="Description" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="key"
-        content="Your API key"
-      />
-      <RowComponent title="action" content="add" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="key"
-        content="Your API key"
-      />
-      <RowComponent title="action" content="Status" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="order"
-        content="Order ID"
-      />
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
-      </Row>
-      <Row
-        className="json-container"
-        style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
-      >
-        {JSON.stringify(jsonData3, null, 3)}
-      </Row>
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("multipleOrdersStatus")}</div>
-      </Row>
-      <RowComponent title="Parameters" content="Description" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="key"
-        content="Your API key"
-      />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="action"
-        content="status"
-      />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="orders"
-        content="Order IDs (separated by a comma, up to 100 IDs)"
-      />
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
-      </Row>
-      <Row
-        className="json-container"
-        style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
-      >
-        {JSON.stringify(jsonData4, null, 3)}
-      </Row>
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("userBalance")}</div>
-      </Row>
-      <RowComponent title="Parameters" content="Description" />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="key"
-        content="Your API key"
-      />
-      <RowComponent
-        backgroundColor={lightBlue}
-        title="action"
-        content="balance"
-      />
-      <Row style={{ marginTop: "10px" }}>
-        <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
-      </Row>
-      <Row
-        className="json-container"
-        style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
-      >
-        {JSON.stringify(jsonData5, null, 3)}
-      </Row>
-    </div>
+        <div className="text-[16px] font-bold">{t("apiDocs")}</div>
+        <RowComponent title="HTTP Method" content="POST" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="API URL"
+          content={url}
+        />
+        <RowComponent
+          title="API Key"
+          content="Get an API key on the Account page"
+        />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="Response format"
+          content="JSON"
+        />
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("serviceList")}</div>
+        </Row>
+        <RowComponent title="Parameters" content="Description" header={true} />
+        <RowComponent title="key" content="Your API key" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="action"
+          content="services"
+        />
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
+        </Row>
+        <Row
+          className="json-container"
+          style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
+        >
+          {JSON.stringify(jsonData1, null, 3)}
+        </Row>
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("addOrder")}</div>
+        </Row>
+        <Row className="font-semibold">Default</Row>
+        <RowComponent title="Parameters" content="Description" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="key"
+          content="Your API key"
+        />
+        <RowComponent title="action" content="add" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="service"
+          content="Service ID"
+        />
+        <RowComponent title="link" content="Link to page" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="quantity"
+          content="Needed quantity"
+        />
+        <RowComponent title="runs (optional)" content="Runs to deliver" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="interval (optional)"
+          content="Interval in minutes"
+        />
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
+        </Row>
+        <Row
+          className="json-container"
+          style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
+        >
+          {JSON.stringify(jsonData2, null, 3)}
+        </Row>
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("orderStatus")}</div>
+        </Row>
+        <RowComponent title="Parameters" content="Description" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="key"
+          content="Your API key"
+        />
+        <RowComponent title="action" content="add" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="key"
+          content="Your API key"
+        />
+        <RowComponent title="action" content="Status" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="order"
+          content="Order ID"
+        />
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
+        </Row>
+        <Row
+          className="json-container"
+          style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
+        >
+          {JSON.stringify(jsonData3, null, 3)}
+        </Row>
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">
+            {t("multipleOrdersStatus")}
+          </div>
+        </Row>
+        <RowComponent title="Parameters" content="Description" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="key"
+          content="Your API key"
+        />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="action"
+          content="status"
+        />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="orders"
+          content="Order IDs (separated by a comma, up to 100 IDs)"
+        />
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
+        </Row>
+        <Row
+          className="json-container"
+          style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
+        >
+          {JSON.stringify(jsonData4, null, 3)}
+        </Row>
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("userBalance")}</div>
+        </Row>
+        <RowComponent title="Parameters" content="Description" />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="key"
+          content="Your API key"
+        />
+        <RowComponent
+          backgroundColor={lightBlue}
+          title="action"
+          content="balance"
+        />
+        <Row style={{ marginTop: "10px" }}>
+          <div className="text-[16px] font-bold">{t("exampleResponse")}</div>
+        </Row>
+        <Row
+          className="json-container"
+          style={{ whiteSpace: "pre-wrap", fontFamily: "monospace" }}
+        >
+          {JSON.stringify(jsonData5, null, 3)}
+        </Row>
+      </div>
     </div>
   );
 };

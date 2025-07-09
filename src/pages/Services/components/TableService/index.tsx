@@ -14,7 +14,6 @@ type Props = {
 
 const TableService: React.FC<Props> = ({ categoryService }) => {
   const isMobile = window.innerWidth <= 768;
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [description, setDescription] = useState<string>("");
 
@@ -46,7 +45,7 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
       dataIndex: "rate_1000",
       width: 120,
       render: (value: number) =>
-          `${Number(value).toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 10, })}`,
+        `${Number(value).toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 10 })}`,
     },
     {
       key: 4,
@@ -216,3 +215,6 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
 };
 
 export default React.memo(TableService);
+function useTranslation(): { t: any; i18n: any } {
+  throw new Error("Function not implemented.");
+}

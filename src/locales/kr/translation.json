@@ -1,0 +1,388 @@
+{
+  "home": "홈",
+  "accountSetting": "계정 설정",
+  "newOrder": "새 주문",
+  "services": "서비스",
+  "deposit": "입금",
+  "orders": "주문",
+  "addFunds": "자금 추가",
+  "api": "API",
+  "affiliates": "제휴",
+  "massOrder": "대량 주문",
+  "tickets": "티켓",
+  "contact": "연락처",
+  "unknown": "알 수 없음",
+  "goodMorning": "좋은 아침입니다",
+  "goodAfternoon": "좋은 오후입니다",
+  "goodEvening": "좋은 저녁입니다",
+  "accountSettings": "계정 설정",
+  "logout": "로그아웃",
+  "balance": "잔액",
+  "client": "클라이언트",
+  "pleaseSelectService": "서비스를 선택해주세요",
+  "selectService": "서비스 선택",
+  "pleaseEnterLink": "링크를 입력해주세요",
+  "enterLink": "링크 입력",
+  "pleaseEnterQuantity": "수량을 입력해주세요",
+  "enterQuantity": "수량 입력",
+  "comments": "코멘트 (라인당 1개)",
+  "enterComments": "코멘트 입력",
+  "charge": "요금",
+  "calculatedCharge": "계산된 요금",
+  "submit": "제출",
+  "needNoticeablePresence": "눈에 띄는 온라인 존재가 필요하신가요?",
+  "helpWithThat": "저희가 도와드릴 수 있습니다! 패널에 제공된 자동 SMM 서비스를 통해 훌륭한 노출을 얻을 수 있습니다",
+  "placeOrder": "주문만 하시면 모든 것을 처리해 드립니다. 계정에 자금을 추가하는 데 다양한 결제 수단을 제공합니다",
+  "category": "카테고리",
+  "pleaseSelectCategory": "카테고리를 선택해주세요",
+  "service": "서비스",
+  "searchService": "서비스 검색",
+  "quantity": "수량",
+  "link": "링크",
+  "all": "모두",
+  "pending": "대기 중",
+  "inprogress": "진행 중",
+  "completed": "완료됨",
+  "partial": "부분 완료됨",
+  "processing": "처리 중",
+  "canceled": "취소됨",
+  "orderid": "주문 ID",
+  "date": "날짜",
+  "startCount": "시작 개수",
+  "status": "상태",
+  "remains": "남은 수량",
+  "searchOrders": "주문 검색",
+  "instruction": "안내",
+  "step1": "1단계: 결제 수단 선택",
+  "step2": "2단계: 결제 금액 입력",
+  "step3": "3단계: '결제' 버튼 클릭",
+  "step4": "4단계: 결제를 완료하세요",
+  "method": "결제 수단",
+  "amount": "금액",
+  "pay": "결제",
+  "id": "ID",
+  "paymentMethod": "결제 수단",
+  "pleaseSelectPaymentMethod": "결제 수단을 선택해주세요",
+  "pleaseEnterAmount": "금액을 입력해주세요",
+  "failedToFetchPaymentMethods": "결제 수단 가져오기에 실패했습니다",
+  "failedToFetchPayments": "결제 내역 가져오기에 실패했습니다",
+  "failedToAddPayment": "결제 추가에 실패했습니다",
+  "paymentAddedSuccessfully": "결제가 성공적으로 추가되었습니다",
+  "unexpectedErrorOccurred": "예상치 못한 오류가 발생했습니다",
+  "apiDocs": "API 문서",
+  "serviceList": "서비스 목록",
+  "exampleResponse": "응답 예시",
+  "addOrder": "주문 추가",
+  "orderStatus": "주문 상태",
+  "multipleOrdersStatus": "여러 주문 상태",
+  "userBalance": "사용자 잔액",
+  "referralLink": "추천 링크",
+  "commissionRate": "커미션율",
+  "minimumPayout": "최소 출금액",
+  "copied": "복사됨",
+  "failedToFetchAffiliateSystemData": "제휴 시스템 데이터를 가져오지 못했습니다",
+  "failedToFetchEarningAffiliatesData": "수익 제휴 데이터를 가져오지 못했습니다",
+  "earningAffiliate": "수익 제휴자",
+  "registrations": "가입 수",
+  "referrals": "추천 수",
+  "conversionRate": "전환율",
+  "totalEarnings": "총 수익",
+  "availableEarnings": "사용 가능한 수익",
+  "subject": "제목",
+  "pleaseEnterSubject": "제목을 입력해주세요",
+  "message": "메시지",
+  "pleaseEnterMessage": "메시지를 입력해주세요",
+  "submitTicket": "티켓 제출",
+  "note": "노트",
+  "noteMessage": "이미지 업로드 링크를 받으려면 https://pic.surf/ 로 이동하십시오.",
+  "searchTickets": "티켓 검색",
+  "ticketSubmittedSuccessfully": "티켓이 성공적으로 제출되었습니다",
+  "failedToSubmitTicket": "티켓 제출에 실패했습니다",
+  "errorSubmittingTicket": "티켓 제출 중 오류 발생",
+  "getInTouch": "문의하기",
+  "name": "이름",
+  "pleaseInputYourName": "이름을 입력해주세요!",
+  "email": "이메일",
+  "pleaseInputYourEmail": "이메일을 입력해주세요!",
+  "invalidEmail": "유효한 이메일이 아닙니다!",
+  "pleaseInputYourMessage": "메시지를 입력해주세요!",
+  "telegram": "텔레그램",
+  "messenger": "메신저",
+  "zalo": "자로",
+  "facebook": "페이스북",
+  "oneOrderPerLine": "한 줄당 하나의 주문 (형식)",
+  "pleaseEnterOrderDetails": "원하는 형식으로 주문 정보를 입력해주세요",
+  "serviceIdLinkQuantity": "service_id | 링크 | 수량",
+  "amountInUSD": "USD",
+  "amountInVND": "VND",
+  "amountInBath": "BATH",
+  "understand": "자금을 추가한 후 부정 취소나 환불을 요청하지 않는 것에 동의합니다",
+  "affiliate_header": "제휴 프로그램으로 수익 창출",
+  "affiliate_register_now": "지금 등록",
+  "selectACategory": "카테고리 선택",
+  "contact_us": "문의하기",
+  "send": "전송",
+  "contact_us_message": "질문이나 우려 사항이 있으시면 언제든지 연락주세요. 도움을 드리겠습니다.",
+  "filterCategory": "카테고리 필터",
+  "hello": "안녕하세요",
+  "welcome_to": "에 오신 것을 환영합니다",
+  "balanceSpent": "사용된 잔액",
+  "orderHistory": "주문 내역",
+  "totalOrder": "총 주문 수",
+  "orderHistoryDescription": "주문 내역을 확인하세요",
+  "accountBalance": "계정 잔액",
+  "view": "보기",
+  "affiliate": "제휴",
+  "apiDocument": "API 문서",
+  "depositFundsToYourWallet": "지갑에 자금 입금",
+  "paymentHistory": "결제 내역",
+  "paymentHistoryDescription":"결제 내역을 확인하세요",
+  "userName": "사용자 이름",
+  "referalLink": "추천 링크",
+  "hero": {
+    "title": "타겟팅된 No-Drop 서비스를 위한 최고의 SMM 패널",
+    "description": "SMM 패널은 유럽, 미국, 아시아에서 타겟팅된 SMM 서비스를 제공하는 1위 공급업체입니다. 전 세계 상위 10위 SMM 공급업체 중 하나!",
+    "countries": {
+      "italy": "이탈리아",
+      "germany": "독일",
+      "spain": "스페인",
+      "usa": "미국",
+      "japan": "일본"
+    },
+    "cta": "지금 시작하기 🚀"
+  },
+  "stats": {
+    "totalServices": "전체 서비스 수",
+    "ordersToday": "오늘의 주문 수",
+    "usersToday": "오늘의 사용자 수"
+  },
+  "home_landing": {
+    "welcome": "Supreme SMM에 오신 것을 환영합니다! 계정에 액세스하려면 로그인 정보를 입력하세요.",
+    "usernamePlaceholder": "사용자 이름을 입력하세요",
+    "passwordPlaceholder": "비밀번호를 입력하세요",
+    "signIn": "로그인",
+    "rememberMe": "로그인 상태 유지",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "forgotPasswordTitle": "비밀번호 찾기",
+    "noAccount": "계정이 없으신가요?"
+  },
+   "features": {
+    "heading": "왜 SMM SMM을 선택해야 하나요?",
+    "subheading": "SMM은 Instagram 타겟 팔로워, 좋아요 및 댓글을 위한 주요 공급업체로서 전 세계적으로 타겟 SMM 서비스를 위한 최고의 선택입니다.",
+    "leaderTitle": "타겟 SMM 서비스의 선두주자",
+    "leaderDesc": "우리는 전 세계 수천 명의 고객에게 신뢰받는 타겟 SMM 서비스 제공업체입니다.",
+    "qualityTitle": "고품질 소셜 미디어 성장",
+    "qualityDesc": "콘텐츠와 잘 어울리는 실제 고품질 팔로워, 좋아요, 조회수 및 댓글을 제공합니다.",
+    "noDropTitle": "드롭 없는 보장된 서비스",
+    "noDropDesc": "안정성과 즉각적인 보충 정책을 보장하는 드롭 없는 서비스를 제공합니다.",
+    "cheapestTitle": "가장 저렴한 SMM 가격",
+    "cheapestDesc": "품질을 희생하지 않고 누구나 접근 가능한 경쟁력 있는 가격을 제공합니다.",
+    "quickTitle": "빠르고 신뢰할 수 있는 제공",
+    "quickDesc": "결과가 거의 즉시 시작되는 빠른 제공. 우리의 시스템은 24시간 작동합니다.",
+    "supportTitle": "24시간 고객 지원",
+    "supportDesc": "전담 고객 지원팀이 24시간 연중무휴로 질문이나 문제를 도와드립니다."
+  },
+   "howItWorks": {
+    "heading": "SMM 패널은 어떻게 작동하나요?",
+    "subheading": "SMM 패널은 사용자와 소셜 미디어 플랫폼 간의 중개자 역할을 하는 소프트웨어 회사입니다.",
+    "steps": {
+      "1": {
+        "title": "계정 만들기",
+        "desc": "SMM에 가입하여 계정을 생성하세요. 등록 과정은 빠르고 간편합니다."
+      },
+      "2": {
+        "title": "금액 충전",
+        "desc": "신용카드, PayPal, 암호화폐 등 다양한 방법으로 잔액을 충전하세요."
+      },
+      "3": {
+        "title": "서비스 선택",
+        "desc": "서비스 카탈로그를 탐색하여 귀하의 소셜 미디어 목표에 맞는 서비스를 선택하세요."
+      },
+      "4": {
+        "title": "보장된 결과",
+        "desc": "고품질, 신뢰할 수 있는 결과를 드롭 없는 보장 및 리필 옵션과 함께 제공합니다."
+      }
+    }
+  },
+   "services": {
+    "heading": "저렴한 타겟형 SMM 서비스 제공업체",
+    "subheading": "SMM은 소셜 미디어 존재감을 높이기 위해 설계된 2000개 이상의 다양한 서비스를 모든 플랫폼에 제공합니다.",
+    "instagram": {
+      "title": "인스타그램 SMM 패널",
+      "description": "진짜 타겟 팔로워, 좋아요, 댓글 및 조회수를 구매하여 인스타그램 존재감을 강화하세요.",
+      "features": [
+        "실제 타겟 팔로워",
+        "고품질 좋아요 및 댓글",
+        "영상 조회수 증가"
+      ]
+    },
+    "twitch": {
+      "title": "트위치 SMM 패널",
+      "description": "스트리머를 위한 진짜 팔로워, 조회수 및 참여를 통해 트위치 채널을 성장시키세요.",
+      "features": [
+        "트위치 팔로워 증가",
+        "실시간 스트리밍 조회수 향상",
+        "채널 구독"
+      ]
+    },
+    "spotify": {
+      "title": "스포티파이 SMM 패널",
+      "description": "진짜 스포티파이 재생수, 팔로워 및 플레이리스트 등록으로 음악 경력을 성장시키세요.",
+      "features": [
+        "재생수 및 팔로워 증가",
+        "플레이리스트 등록",
+        "차트 진입 지원"
+      ]
+    },
+    "youtube": {
+      "title": "유튜브 SMM 패널",
+      "description": "구독자, 조회수 및 시청 시간 서비스를 통해 유튜브 성장을 가속화하세요.",
+      "features": [
+        "실제 구독자 및 조회수",
+        "시청 시간 증가",
+        "수익 창출 지원"
+      ]
+    },
+    "tiktok": {
+      "title": "틱톡 SMM 패널",
+      "description": "진짜 팔로워, 좋아요 및 조회수를 통해 콘텐츠 도달 범위를 극대화하여 틱톡 성장을 유도하세요.",
+      "features": [
+        "실제 틱톡 팔로워",
+        "바이럴 영상 조회수",
+        "참여도 향상"
+      ]
+    },
+    "facebook": {
+      "title": "페이스북 SMM 패널",
+      "description": "진짜 좋아요, 공유 및 타겟 참여를 통해 페이스북 비즈니스 페이지를 성장시키세요.",
+      "features": [
+        "페이지 좋아요 및 팔로워",
+        "게시물 참여도",
+        "영상 조회수"
+      ]
+    }
+  },
+    "videoSection": {
+    "heading": "더 도움이 필요하신가요?",
+    "subheading": "SMM 패널 영상 가이드를 확인해보세요",
+    "description": "SMM의 SMM 패널은 소셜 미디어 존재감을 향상시키려는 모든 사용자에게 매끄럽고 직관적인 경험을 제공하도록 설계되었습니다.",
+    "footer1": "SMM은 전 세계 최고의 소셜 미디어 패널입니다! 🌍",
+    "footer2": "무엇을 기다리고 계신가요?",
+    "button": "지금 바로 시작하세요 🚀"
+  },
+   "featureSection": {
+    "features": [
+      {
+        "title": "#1 SMM 패널 제공업체",
+        "description": "SMM 플랫폼 중에서 SMM은 전 세계에서 상위 10위 안에 드는 타겟팅 서비스 제공업체입니다."
+      },
+      {
+        "title": "가장 저렴한 SMM 패널",
+        "description": "SMM은 업계 최저가로 진정한 서비스를 제공합니다. 저렴하지만 품질은 보장됩니다."
+      },
+      {
+        "title": "타겟팅된 SMM 서비스",
+        "description": "SMM에서는 Instagram 등 다양한 소셜 미디어에 최적화된 최고의 타겟팅 SMM 서비스를 제공합니다."
+      },
+      {
+        "title": "24시간 고객 지원",
+        "description": "SMM의 고객 서비스는 하루 24시간, 주 7일 이용 가능합니다."
+      }
+    ]
+  },
+   "paymentSection": {
+    "heading": "유연하고 안전한 결제 방법",
+    "subheading": "다양한 결제 수단과 보너스 리워드를 제공하여 편리하고 안전한 거래를 보장합니다.",
+    "methods": [
+      {
+        "title": "신용카드 및 체크카드",
+        "description": "비자, 마스터카드, 아메리칸 익스프레스",
+        "bonus": "1% 보너스"
+      },
+      {
+        "title": "페이팔",
+        "description": "신뢰할 수 있는 사용자 전용",
+        "bonus": "보너스 없음"
+      },
+      {
+        "title": "암호화폐",
+        "description": "비트코인, 이더리움, USDT, 라이트코인",
+        "bonus": "3% 보너스"
+      },
+      {
+        "title": "Payeer",
+        "description": "빠른 전자 지갑 시스템",
+        "bonus": "3% 보너스"
+      },
+      {
+        "title": "퍼펙트 머니",
+        "description": "국제 거래",
+        "bonus": "2% 보너스"
+      },
+      {
+        "title": "기타 결제 수단",
+        "description": "은행, 알리페이, 위챗페이",
+        "bonus": "문의해주세요"
+      }
+    ]
+  },
+  "ctaSection": {
+    "heading": "소셜 미디어를 성장시킬 준비가 되셨나요?",
+    "subheading": "수천 명의 만족한 고객과 함께 오늘 바로 타겟팅된 노드롭(No-drop) 서비스로 소셜 미디어 존재감을 키워보세요.",
+    "register": "지금 등록하고 무료 체험 받기",
+    "viewServices": "모든 서비스 보기"
+  },
+  "faq": {
+    "title": "추가 질문이 있으신가요?",
+    "description": "더 도움이 필요하시면 24시간 연중무휴 고객 지원팀에 문의하세요. 언제든지 도와드릴 준비가 되어 있습니다!",
+    "button": "지금 시작하기 🚀",
+    "questions": [
+      {
+        "q": "SMM 패널의 목적은 무엇인가요?",
+        "a": "SMM 패널은 저렴한 가격에 좋아요, 팔로워, 댓글 등을 제공하여 소셜 미디어 계정을 성장시키는 데 도움을 줍니다."
+      },
+      {
+        "q": "어떤 유형의 SMM 서비스를 제공하나요?",
+        "a": "Instagram, TikTok, YouTube, Facebook 등의 플랫폼에서 타겟팅된 팔로워, 좋아요, 조회수, 댓글 등을 제공합니다."
+      },
+      {
+        "q": "드립 피드 서비스는 모든 플랫폼에서 안전한가요?",
+        "a": "네, 드립 피드 서비스는 유기적인 행동을 시뮬레이션하고 플랫폼 제한을 준수하도록 최적화되어 있습니다."
+      },
+      {
+        "q": "대량 주문은 어떻게 작동하나요?",
+        "a": "대량 주문 기능을 사용하면 단일 양식을 통해 여러 서비스를 한 번에 주문할 수 있어 시간과 노력을 절약할 수 있습니다."
+      },
+      {
+        "q": "API를 통해 주문하려면 어떻게 해야 하나요?",
+        "a": "로그인 후 대시보드에서 제공되는 문서화된 API를 사용하여 주문을 자동화할 수 있습니다."
+      },
+      {
+        "q": "결과를 확인하려면 얼마나 걸리나요?",
+        "a": "대부분의 서비스는 주문 후 몇 분 이내에 시작되며, 서비스 유형과 볼륨에 따라 다를 수 있습니다."
+      }
+    ]
+  },
+   "testimonials": {
+    "title": "고객들의 생생한 후기",
+    "description": "SMM은 고객들의 성공 사례에 자부심을 가지고 있습니다. 인플루언서부터 소규모 비즈니스 소유자까지, 많은 분들이 고품질 SMM 서비스를 통해 소셜 미디어 존재감을 크게 향상시켰습니다.",
+    "items": [
+      {
+        "name": "Marco R.",
+        "text": "서비스가 저렴하고 결과도 기대 이상이에요. 특히 무료 초기 잔액 덕분에 추천할 만합니다."
+      },
+      {
+        "name": "Devesh Marnan",
+        "text": "이제 더 많은 시간과 비용을 절약하면서 제 패널을 확장할 수 있게 되었어요. 감사합니다!!"
+      },
+      {
+        "name": "Sarah K.",
+        "text": "제 인스타그램 계정에 빠르게 실제 팔로워가 늘었어요. 품질과 속도 모두 만족합니다."
+      },
+      {
+        "name": "Liam P.",
+        "text": "고객 지원이 빠르고 친절했어요. 서비스 덕분에 제 브랜드 인지도가 많이 높아졌습니다."
+      }
+    ]
+  }
+}

@@ -1,33 +1,25 @@
 import { Megaphone, DollarSign, Target, MessageCircle } from "lucide-react";
+//@ts-ignore
+import { useTranslation } from "react-i18next";
 
 export default function FeatureSection() {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: Megaphone,
-      title: "#1 SMM Panel Provider",
-      description:
-        "When it comes to SMM platforms, SMM is easily in the top ten targeted service providers worldwide.",
       color: "from-pink-500 to-red-500",
     },
     {
       icon: DollarSign,
-      title: "Cheapest SMM Panel",
-      description:
-        "SMM offers authentic services at industry-low prices. Cheap prices but with the quality insurance.",
       color: "from-yellow-400 to-yellow-600",
     },
     {
       icon: Target,
-      title: "SMM Targeted Services",
-      description:
-        "On SMM, you will discover the best targeted SMM services available for Instagram and others SM.",
       color: "from-blue-500 to-indigo-600",
     },
     {
       icon: MessageCircle,
-      title: "24/7 Customer Service",
-      description:
-        "SMM's customer service is available 24 hours a day, seven days a week.",
       color: "from-green-400 to-teal-500",
     },
   ];
@@ -52,8 +44,12 @@ export default function FeatureSection() {
             >
               <feature.icon className="h-6 w-6" />
             </div>
-            <h3 className="text-lg font-semibold">{feature.title}</h3>
-            <p className="mt-2 text-sm text-gray-600">{feature.description}</p>
+            <h3 className="text-lg font-semibold">
+              {t(`featureSection.features.${index}.title`)}
+            </h3>
+            <p className="mt-2 text-sm text-gray-600">
+              {t(`featureSection.features.${index}.description`)}
+            </p>
           </div>
         ))}
       </div>

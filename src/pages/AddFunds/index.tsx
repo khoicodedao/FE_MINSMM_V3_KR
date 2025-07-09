@@ -49,7 +49,7 @@ const AddFunds = () => {
   const [binanceAmount, setBinanceAmount] = useState(0);
   const [isPopupOpen, setIsPopupOpen] = useState(false); //popup-payment-method
   const [isPopupOpenThai, setIsPopupOpenThai] = useState(false); //popup-payment-method
-  const [isloadingPay , setIsLoadingPay] = useState(false);
+  const [isloadingPay, setIsLoadingPay] = useState(false);
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
   };
@@ -67,7 +67,9 @@ const AddFunds = () => {
   };
 
   const [isPopupBinanceOpen, setIsPopupBinanceOpen] = useState(false); //popup-payment-method
-  const [qrData, setQrData] = useState<{ qr_code: string; emv: string } | null>(null);
+  const [qrData, setQrData] = useState<{ qr_code: string; emv: string } | null>(
+    null,
+  );
   const handleOpenBinancePopup = () => {
     setIsPopupBinanceOpen(true);
   };
@@ -95,9 +97,7 @@ const AddFunds = () => {
     try {
       const response = await paymentMethodAPI.getAll({}, GetApiKey() || "");
       if (response.data.status === 200) {
-        setPaymentMethods([
-          ...response.data.result,
-        ]);
+        setPaymentMethods([...response.data.result]);
       } else {
         message.error(
           response.data.error.message || t("failedToFetchPaymentMethods"),
@@ -130,7 +130,9 @@ const AddFunds = () => {
         setPayments(response.data.result.data || []);
         if (!form.getFieldValue("payment_method_id")) {
           form.setFieldsValue({
-            payment_method_id: paymentMethods[0]?.id || response.data.result.data[0]?.payment_method_id,
+            payment_method_id:
+              paymentMethods[0]?.id ||
+              response.data.result.data[0]?.payment_method_id,
           });
         }
         setTotalPayments(response.data.result.total || 0);
@@ -195,43 +197,63 @@ const AddFunds = () => {
   };
   const onFinish = async (values: any) => {
     const selectedMethod = paymentMethods.find(
-        (method) => method.id === values.payment_method_id,
+      (method) => method.id === values.payment_method_id,
     );
     setIsLoadingPay(true);
     if (selectedMethod?.type === PAYMENT_METHOD_TYPE.BANK_VN.value) {
-      const response = await paymentAPI.create({money: values.usdAmount, payment_method_id: values.payment_method_id}, GetApiKey() || "");
+      const response = await paymentAPI.create(
+        {
+          money: values.usdAmount,
+          payment_method_id: values.payment_method_id,
+        },
+        GetApiKey() || "",
+      );
       if (response.data.status === 200) {
-        const responseQR = await paymentAPI.getQR({id: response.data.result.id}, GetApiKey() || "");
+        const responseQR = await paymentAPI.getQR(
+          { id: response.data.result.id },
+          GetApiKey() || "",
+        );
         if (responseQR.data.status === 200) {
           setQrData(responseQR.data.result); // Lưu dữ liệu QR vào state
           message.success(t("paymentAddedSuccessfully"));
           handleOpenPopup();
           setIsLoadingPay(false);
         } else {
-          message.error(responseQR.data.error.message || t("failedToFetchQRCode"));
+          message.error(
+            responseQR.data.error.message || t("failedToFetchQRCode"),
+          );
           setIsLoadingPay(false);
         }
       } else {
         message.error(response.data.error.message || t("failedToAddPayment"));
       }
-    
     } else if (selectedMethod?.type === PAYMENT_METHOD_TYPE.BANK_TH.value) {
-      const response = await paymentAPI.create({money: values.usdAmount, payment_method_id: values.payment_method_id}, GetApiKey() || "");
+      const response = await paymentAPI.create(
+        {
+          money: values.usdAmount,
+          payment_method_id: values.payment_method_id,
+        },
+        GetApiKey() || "",
+      );
       if (response.data.status === 200) {
-        const responseQR = await paymentAPI.getQR({id: response.data.result.id}, GetApiKey() || "");
+        const responseQR = await paymentAPI.getQR(
+          { id: response.data.result.id },
+          GetApiKey() || "",
+        );
         if (responseQR.data.status === 200) {
           setQrData(responseQR.data.result); // Lưu dữ liệu QR vào state
           message.success(t("paymentAddedSuccessfully"));
           handleOpenThaiPopup();
           setIsLoadingPay(false);
         } else {
-          message.error(responseQR.data.error.message || t("failedToFetchQRCode"));
+          message.error(
+            responseQR.data.error.message || t("failedToFetchQRCode"),
+          );
           setIsLoadingPay(false);
         }
       } else {
         message.error(response.data.error.message || t("failedToAddPayment"));
       }
-    
     } else {
       handleOpenBinancePopup();
       setBinanceAmount(values.money);
@@ -294,7 +316,7 @@ const AddFunds = () => {
     <div className="max-w-[100vw] p-3 md:p-6">
       <div className="flex-1 overflow-y-auto">
         <h4 className="mb-6 text-start text-2xl font-bold text-black">
-          Deposit
+          {t("deposit")}
         </h4>
         <div className="mb-6 flex w-full flex-col gap-6 md:flex-row">
           <Card className="flex w-full flex-col space-y-6 md:w-1/2">
@@ -303,7 +325,7 @@ const AddFunds = () => {
                 className="mb-3 border-b border-[#F1EFF5] pb-3 text-base font-bold"
                 style={{ fontSize: "16px" }}
               >
-                Deposit funds to your wallet
+                {t("depositFundsToYourWallet")}
               </h5>
 
               <div>
@@ -315,7 +337,7 @@ const AddFunds = () => {
                   }`}
                   onClick={() => setActiveTab("add")}
                 >
-                  Add funds
+                  {t("addFunds")}
                 </button>
                 <button
                   className={`flex-1 cursor-pointer rounded-md px-4 py-2 text-sm font-medium ${
@@ -325,7 +347,7 @@ const AddFunds = () => {
                   }`}
                   onClick={() => setActiveTab("history")}
                 >
-                  Payment history
+                  {t("paymentHistory")}
                 </button>
               </div>
             </div>
@@ -357,7 +379,7 @@ const AddFunds = () => {
                   //@ts-ignore
                   data={qrData || {}}
                 ></QRCodeTHPopup>
-                
+
                 <div className="col-span-12 overflow-hidden rounded-lg bg-white p-6 shadow-md md:col-span-6 lg:col-span-8">
                   <CustomForm form={form} onFinish={onFinish} layout="vertical">
                     <CustomFormItem
@@ -375,8 +397,12 @@ const AddFunds = () => {
                         value={selectedPaymentMethod?.id}
                         onChange={(value) => {
                           // Use onChange instead of onSelect for better compatibility
-                          const selectedMethod = paymentMethods.find((method) => method.id === value);
-                          setSelectedInstruction(selectedMethod?.instruction || "");
+                          const selectedMethod = paymentMethods.find(
+                            (method) => method.id === value,
+                          );
+                          setSelectedInstruction(
+                            selectedMethod?.instruction || "",
+                          );
                           setSelectedPaymentMethod(selectedMethod);
                         }}
                         options={paymentMethods.map((method) => ({
@@ -386,32 +412,44 @@ const AddFunds = () => {
                         style={{ height: 40 }}
                       />
                     </CustomFormItem>
-                    {selectedPaymentMethod?.type === PAYMENT_METHOD_TYPE.BANK_VN.value ? (
-                        <QRAmount exchangeRate={selectedPaymentMethod?.rate || 25000} />
-                    ) : selectedPaymentMethod?.type === PAYMENT_METHOD_TYPE.BANK_TH.value ? (
-                        <QRAmountTH exchangeRate={selectedPaymentMethod?.rate || 10000} />
+                    {selectedPaymentMethod?.type ===
+                    PAYMENT_METHOD_TYPE.BANK_VN.value ? (
+                      <QRAmount
+                        exchangeRate={selectedPaymentMethod?.rate || 25000}
+                      />
+                    ) : selectedPaymentMethod?.type ===
+                      PAYMENT_METHOD_TYPE.BANK_TH.value ? (
+                      <QRAmountTH
+                        exchangeRate={selectedPaymentMethod?.rate || 10000}
+                      />
                     ) : (
-                        <CustomFormItem
-                            label={t("amount")}
-                            name="money"
-                            rules={[{ required: true, message: t("pleaseEnterAmount") }]}
-                        >
-                          <CustomInput
-                              placeholder={t("pleaseEnterAmount")}
-                              type="number"
-                              style={{ height: 40 }}
-                          />
-                        </CustomFormItem>
+                      <CustomFormItem
+                        label={t("amount")}
+                        name="money"
+                        rules={[
+                          { required: true, message: t("pleaseEnterAmount") },
+                        ]}
+                      >
+                        <CustomInput
+                          placeholder={t("pleaseEnterAmount")}
+                          type="number"
+                          style={{ height: 40 }}
+                        />
+                      </CustomFormItem>
                     )}
                     <div className="mb-4">
                       <Checkbox></Checkbox> {t("understand")}
                     </div>
-                    <Button type="primary" htmlType="submit" className="w-full" loading={isloadingPay}>
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      className="w-full"
+                      loading={isloadingPay}
+                    >
                       {t("pay")}
                     </Button>
                   </CustomForm>
                 </div>
-
               </div>
             ) : (
               <div className="space-y-4">
@@ -455,16 +493,16 @@ const AddFunds = () => {
               <div className="relative">
                 <div className="col-span-12 flex h-fit items-start break-words rounded-lg bg-white p-6 shadow-md md:col-span-6 lg:col-span-4">
                   <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#2ca58d"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="icon icon-tabler icons-tabler-outline icon-tabler-info-circle mr-1 min-w-[24px] text-blue-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2ca58d"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-info-circle mr-1 min-w-[24px] text-blue-500"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
@@ -481,18 +519,17 @@ const AddFunds = () => {
                       <p className="">{t("step3")}</p>
                       <p className="">{t("step4")}</p>
                       {selectedInstruction ? (
-                          <div
-                              dangerouslySetInnerHTML={{
-                                __html: selectedInstruction,
-                              }}
-                          />
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: selectedInstruction,
+                          }}
+                        />
                       ) : null}
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-
           </Card>
         </div>
       </div>
