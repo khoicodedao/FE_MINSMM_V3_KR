@@ -71,7 +71,7 @@ const Sidebar = ({ onClose }: SideBarProps) => {
     { to: TICKETS, label: t("tickets"), icon: "tickets" },
     { to: MASS_ORDER, label: t("massOrder"), icon: "mass-order" },
     // { to: CHILD_PANEL, label: t("Child Panel"), icon: "child-panel" },
-    { to: PLANS, label: t("Child panel"), icon: "plans" },
+    { to: PLANS, label: t("childPanel"), icon: "plans" },
   ];
 
   const icon = (iconName: string) => {

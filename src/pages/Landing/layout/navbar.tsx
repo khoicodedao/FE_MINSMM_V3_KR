@@ -31,6 +31,7 @@ import Korea from "assets/images/svg/korea.svg";
 import English from "assets/images/svg/unitedstates.svg";
 //@ts-ignore
 import { useTranslation } from "react-i18next";
+import { t } from "i18next";
 
 interface NavbarLandingProps {
   seoData?: any;
@@ -100,13 +101,13 @@ const NavbarLanding: React.FC<NavbarLandingProps> = ({ seoData }) => {
       <div className="hidden items-center gap-8 md:flex">
         <div className="flex items-center gap-6">
           <Link to="/" className={getLinkClassName("/")}>
-            Home
+            {t("nav.home")}
           </Link>
           <Link to="/services" className={getLinkClassName("/services")}>
-            Service
+            {t("nav.services")}
           </Link>
           <Link to="/api" className={getLinkClassName("/api")}>
-            API
+            {t("nav.api")}
           </Link>
         </div>
 
@@ -163,26 +164,28 @@ const NavbarLanding: React.FC<NavbarLandingProps> = ({ seoData }) => {
       >
         <div className="flex flex-col items-start gap-4 p-4">
           <Link to="/" className={getLinkClassName("/")}>
-            Home
+            {t("nav.home")}
           </Link>
           <Link to="/services" className={getLinkClassName("/services")}>
-            Service
+            {t("nav.services")}
           </Link>
           <Link to="/api" className={getLinkClassName("/api")}>
-            API
+            {t("nav.api")}
           </Link>
         </div>
+
         <div className="mt-6 flex justify-center gap-4">
           <AntButton
             className="w-[40%] rounded-full border-pink-600 text-pink-600"
             onClick={closeDrawer}
           >
-            <a href="#login">Login</a>
+            <a href="#login">{t("nav.login")}</a>
           </AntButton>
           <RegisterDialog
             classButton={
               "cursor-pointer w-[40%] text-center rounded-full bg-[#EA256D] px-6 py-2 font-medium text-white transition-colors hover:bg-pink-600 border-none"
             }
+            label={t("nav.register")}
           />
         </div>
       </Drawer>
@@ -317,7 +320,8 @@ export const RegisterDialog = ({
   return (
     <>
       <a className={classButton} onClick={() => setOpen(true)}>
-        {label || "Register"}
+        {/* @ts-ignore */}
+        {label || t("nav.register")}
         {icon && icon}
       </a>
 
@@ -438,7 +442,7 @@ export const RegisterDialog = ({
             />
             {formData.touched.password_revert &&
               formData.errors.password_revert && (
-                <div className="mt-1 text-sm text-red-500">
+                <div className="textnav.register-red-500 mt-1 text-sm">
                   {formData.errors.password_revert}
                 </div>
               )}

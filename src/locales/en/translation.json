@@ -1,5 +1,6 @@
 {
   "home": "Home",
+  "placeholder_search_service":"Enter service name",
   "accountSetting": "Account setting",
   "newOrder": "New Order",
   "services_title": "Services",
@@ -85,6 +86,7 @@
   "earningAffiliate": "Earning affiliate",
   "registrations": "Registrations",
   "referrals": "Referrals",
+  "payout": "Payout",
   "conversionRate": "Conversion rate",
   "totalEarnings": "Total earnings",
   "availableEarnings": "Available earnings",
@@ -407,7 +409,184 @@
         "text": "Customer support is fast and helpful. The services really helped boost my brand’s visibility."
       }
     ]
-  }
+  },
+   "nav": {
+    "home": "Home",
+    "services": "Service",
+    "api": "API",
+    "menu": "Menu",
+    "login": "Login",
+    "register": "Register",
+    "register_now": "Register Now",
+    "sign_in": "Sign In",
+    "already_have_account": "Already have an account?"
+  },
+  "form": {
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "enter_username": "Enter your username",
+    "enter_email": "Enter your email",
+    "enter_password": "Enter your password",
+    "enter_password_again": "Enter your password again",
+    "required_username": "Please enter username",
+    "required_email": "Please enter email",
+    "invalid_email": "Invalid email format",
+    "required_password": "Please enter password",
+    "password_min": "Password must be at least 8 characters",
+    "confirm_password_match": "Passwords must match"
+  },
+"footer": {
+    "description": "The #1 SMM Panel Provider for targeted social media services worldwide.",
+    "services": {
+      "title": "Services",
+      "instagram": "Instagram Panel",
+      "tiktok": "TikTok Panel",
+      "youtube": "YouTube Panel",
+      "facebook": "Facebook Panel",
+      "twitch": "Twitch Panel",
+      "all": "All Services"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "how": "How It Works",
+      "api": "API Documentation",
+      "affiliate": "Affiliate Program",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    },
+    "support": {
+      "title": "Support",
+      "contact": "Contact Us",
+      "chat": "Live Chat",
+      "faq": "FAQ",
+      "ticket": "Ticket System",
+      "status": "Status Page"
+    },
+    "copyright": "© 2024. All rights reserved. | The #1 SMM Panel Provider Worldwide"
+  },
+  "pricing": {
+    "heading": "Choose a suitable plan to build and start selling!",
+    "features": {
+      "ready": "Fully programmed and ready for immediate use",
+      "languages": "All languages available",
+      "payments": "Almost all payment methods available: Paypal, Visa, MasterCard, Skrill, Perfect Money, WebMoney, etc.",
+      "price_edit": "Open, close, and edit service prices",
+      "design_2": "2 design templates to choose from",
+      "add_services": "Add, delete, and edit all services",
+      "design_5": "5 design templates to choose from",
+      "custom_design": "Custom design or design based on your requirements",
+      "support": "24/24 customer support through tickets (e.g., dripfeed, cancel, refill, service information, etc.)"
+    },
+    "plans": {
+      "standard": {
+        "title": "Standard",
+        "price": "$2/month",
+        "button": "Select Standard"
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "$10/month",
+        "button": "Select Premium"
+      },
+      "exclusive": {
+        "title": "Exclusive",
+        "price": "$30/month",
+        "button": "Select Exclusive"
+      }
+    }
+  },
+  "pricing_child_panel": {
+    "heading": "Choose a suitable plan to build and start selling!",
+    "features": {
+      "ready": "Fully programmed and ready for immediate use",
+      "languages": "All languages available",
+      "payments": "Almost all payment methods available: Paypal, Visa, MasterCard, Skrill, Perfect Money, WebMoney, etc.",
+      "price_editing": "Open, close, and edit service prices",
+      "template_2": "2 design templates to choose from",
+      "template_5": "5 design templates to choose from",
+      "custom_design": "Custom design or design based on your requirements",
+      "support_24": "24/24 customer support through tickets (e.g., dripfeed, cancel, refill, service information, etc.)"
+    },
+    "plans": {
+      "standard": {
+        "select": "Select",
+        "title": "Standard",
+        "price": "$2/month",
+        "button": "Select Standard"
+      },
+      "premium": {
+        "title": "Premium",
+        "select": "Select",
+        "price": "$10/month",
+        "button": "Select Premium"
+      },
+      "exclusive": {
+        "select": "Select",
+        "title": "Exclusive",
+        "price": "$30/month",
+        "button": "Select Exclusive"
+      }
+    }
+  },
+  "service_page": {
+    "id": "ID",
+    "name": "Service",
+    "rate_1000": "Rate per 1000",
+    "min_order": "Min order",
+    "max_order": "Max order",
+    "average_time": "Average time",
+    "description": "Description",
+    "view": "View",
+    "modal_title": "Service Description",
+    "no_icon": "No Icon"
+  },
+  "affiliate_description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
   
+  "ticket": {
+    "columns": {
+      "id": "ID",
+      "subject": "Subject",
+      "status": "Status",
+      "lastUpdate": "Last Update",
+      "unknown": "Unknown"
+    },
+    "status": {
+      "pending": "Pending",
+      "answered": "Answered",
+      "closed": "Closed",
+      "welcome": "Welcome"
+    }
+  },
+  "ticket_page": {
+    "status_title": "Status",
+    "last_update": "Last Update",
+    "tickets": "Tickets",
+    "subject": "Subject",
+    "message": "Message",
+    "submitTicket": "Submit Ticket",
+    "pleaseEnterSubject": "Please enter subject",
+    "pleaseEnterMessage": "Please enter message",
+    "ticketSubmittedSuccessfully": "Ticket submitted successfully",
+    "failedToSubmitTicket": "Failed to submit ticket",
+    "errorSubmittingTicket": "Error submitting ticket",
+    "note": "Note",
+    "noteMessage": "Please provide as much detail as possible to help us address your issue effectively.",
+    "searchTickets": "Search tickets",
+    "status": {
+      "0": "Pending",
+      "1": "Answered",
+      "2": "Closed",
+      "3": "Welcome"
+    },
+    "searchOptions": {
+      "0": "Subject",
+      "1": "Message"
+    }
+  }
+ 
+
 
 }

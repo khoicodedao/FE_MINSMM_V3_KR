@@ -5,44 +5,54 @@ import {
   Instagram,
   MessageCircle,
 } from "lucide-react";
-
-const footerSections = [
-  {
-    title: "Services",
-    links: [
-      "Instagram Panel",
-      "TikTok Panel",
-      "YouTube Panel",
-      "Facebook Panel",
-      "Twitch Panel",
-      "All Services",
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      "About Us",
-      "How It Works",
-      "API Documentation",
-      "Affiliate Program",
-      "Terms of Service",
-      "Privacy Policy",
-    ],
-  },
-  {
-    title: "Support",
-    links: ["Contact Us", "Live Chat", "FAQ", "Ticket System", "Status Page"],
-  },
-];
-
-const socialLinks = [
-  { icon: Facebook, href: "#" },
-  { icon: Twitter, href: "#" },
-  { icon: Instagram, href: "#" },
-  { icon: MessageCircle, href: "#" },
-];
+// @ts-ignore
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
+  const footerSections = [
+    {
+      title: t("footer.services.title"),
+      links: [
+        t("footer.services.instagram"),
+        t("footer.services.tiktok"),
+        t("footer.services.youtube"),
+        t("footer.services.facebook"),
+        t("footer.services.twitch"),
+        t("footer.services.all"),
+      ],
+    },
+    {
+      title: t("footer.company.title"),
+      links: [
+        t("footer.company.about"),
+        t("footer.company.how"),
+        t("footer.company.api"),
+        t("footer.company.affiliate"),
+        t("footer.company.terms"),
+        t("footer.company.privacy"),
+      ],
+    },
+    {
+      title: t("footer.support.title"),
+      links: [
+        t("footer.support.contact"),
+        t("footer.support.chat"),
+        t("footer.support.faq"),
+        t("footer.support.ticket"),
+        t("footer.support.status"),
+      ],
+    },
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: "#" },
+    { icon: Twitter, href: "#" },
+    { icon: Instagram, href: "#" },
+    { icon: MessageCircle, href: "#" },
+  ];
+
   return (
     <footer className="bg-gray-900 py-16 text-white" id="support">
       <div className="container mx-auto px-4">
@@ -54,10 +64,7 @@ export default function Footer() {
               </div>
               <span className="text-2xl font-bold">SMM</span>
             </div>
-            <p className="mb-6 text-gray-400">
-              The #1 SMM Panel Provider for targeted social media services
-              worldwide.
-            </p>
+            <p className="mb-6 text-gray-400">{t("footer.description")}</p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
@@ -88,10 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>
-            &copy; 2024. All rights reserved. | The #1 SMM Panel Provider
-            Worldwide
-          </p>
+          <p>{t("footer.copyright")}</p>
         </div>
       </div>
     </footer>

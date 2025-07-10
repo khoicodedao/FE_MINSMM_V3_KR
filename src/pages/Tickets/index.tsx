@@ -9,16 +9,69 @@ import note from "assets/images/png/note.png";
 import "./style.scss";
 import { SearchOutlined } from "@ant-design/icons";
 // import { fakeTicketsData } from "./fakeTicketsData";
-import { ticketColumns, TICKET_SEARCH_OPTIONS } from "./config";
+// import { ticketColumns, TICKET_SEARCH_OPTIONS } from "./config";
 import { AnimatePresence, motion } from "framer-motion";
 import SubjectDetail from "./SubjectDetail";
 //@ts-ignore
 import { useTranslation } from "react-i18next";
+import { ColumnsType } from "antd/es/table";
+
+type TicketStatusOption = {
+  text: string;
+  value: number;
+};
 
 const Tickets: React.FC = () => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
+  const TICKET_STATUS_OPTIONS: TicketStatusOption[] = [
+    { text: "Pending", value: 0 },
+    { text: "Answered", value: 1 },
+    { text: "Closed", value: 2 },
+    { text: "Welcome", value: 3 },
+  ];
 
+  const TICKET_SEARCH_OPTIONS = [
+    { label: "Subject", value: 0 },
+    { label: "Message", value: 1 },
+  ];
+
+  const ticketColumns: ColumnsType<any> = [
+    {
+      title: "ID",
+      dataIndex: "id",
+      key: "id",
+      align: "center",
+      width: 60,
+      sorter: (a, b) => a.id - b.id,
+    },
+    {
+      title: t("ticket_page.subject"),
+      dataIndex: "subject",
+      key: "subject",
+      width: 200,
+    },
+    {
+      title: t("ticket_page.status_title"),
+      dataIndex: "status",
+      key: "status",
+      width: 100,
+      filters: TICKET_STATUS_OPTIONS,
+      onFilter: (value, record) => record.status === value,
+      render: (status: number) => {
+        const statusItem = TICKET_STATUS_OPTIONS.find(
+          (item) => item.value === status,
+        );
+        return statusItem ? statusItem.text : "Unknown";
+      },
+    },
+    {
+      title: t("ticket_page.last_update"),
+      dataIndex: "lastUpdate",
+      key: "lastUpdate",
+      width: 160,
+    },
+  ];
   const onFinish = async (values: { subject: string; message: string }) => {
     setLoading(true);
     try {

@@ -7,12 +7,15 @@ import { CollapseCustom } from "components/CollapseCustom";
 import Icons from "assets/icons";
 import TableCustom from "components/TableCustom";
 import { CategoryType } from "constants/types";
+// @ts-ignore
+import { useTranslation } from "react-i18next";
 
 type Props = {
   categoryService: CategoryType;
 };
 
 const TableService: React.FC<Props> = ({ categoryService }) => {
+  const { t } = useTranslation();
   const isMobile = window.innerWidth <= 768;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [description, setDescription] = useState<string>("");
@@ -25,7 +28,7 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
   const columns: ColumnsType<any> = [
     {
       key: 1,
-      title: "ID",
+      title: t("service_page.id"),
       dataIndex: "id",
       width: 70,
       align: "center",
@@ -34,56 +37,55 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
     },
     {
       key: 2,
-      title: "Service",
+      title: t("service_page.name"),
       dataIndex: "name",
       width: 350,
       align: "left",
     },
     {
       key: 3,
-      title: "Rate per 1000",
+      title: t("service_page.rate_1000"),
       dataIndex: "rate_1000",
       width: 120,
       render: (value: number) =>
-        `${Number(value).toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 10 })}`,
+        `${Number(value).toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 10,
+        })}`,
     },
     {
       key: 4,
-      title: "Min order",
+      title: t("service_page.min_order"),
       dataIndex: "min_order",
       width: 120,
     },
     {
       key: 5,
-      title: "Max order",
+      title: t("service_page.max_order"),
       dataIndex: "max_order",
       width: 120,
     },
     {
       key: 6,
-      title: "Average time",
+      title: t("service_page.average_time"),
       dataIndex: "average_time",
       width: 120,
     },
-
     {
       key: 7,
-      title: "Description",
+      title: t("service_page.description"),
       dataIndex: "description",
       width: 120,
       align: "center",
-      render: (text: string, record: any) => {
-        return (
-          <div>
-            <Button
-              className="bg-[#EA1261] text-white transition-colors"
-              onClick={() => showModal(record.description)}
-            >
-              View
-            </Button>
-          </div>
-        );
-      },
+      render: (text: string, record: any) => (
+        <Button
+          className="bg-[#EA1261] text-white transition-colors"
+          onClick={() => showModal(record.description)}
+        >
+          {t("service_page.view")}
+        </Button>
+      ),
     },
   ];
 
@@ -93,14 +95,13 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
       : PAGE_SIZE_OPTIONS.OPTION_10,
     page: 1,
   });
+
   return (
     <div className="">
       <CollapseCustom
         expandIcon={({ isActive }) => (
           <Space>
-            <Typography style={{ color: "#000000 !important" }}>
-              {/* {isActive ? "Hide services" : "Show services"} */}
-            </Typography>
+            <Typography style={{ color: "#000000 !important" }}></Typography>
             <Icons.downOutline rotate={isActive ? 180 : 0} />
           </Space>
         )}
@@ -121,40 +122,45 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
                     className="h-full w-full object-contain"
                   />
                 ) : (
-                  <span className="text-gray-400">No Icon</span>
+                  <span className="text-gray-400">
+                    {t("service_page.no_icon")}
+                  </span>
                 )}
               </div>
             ),
-            // forceRender: true,
             children: isMobile ? (
               <div className="responsive-table">
                 {categoryService?.services?.map((service) => (
                   <div className="card" key={service.id}>
                     <div className="card-item">
-                      <span>ID:</span> {service.id}
+                      <span>{t("service_page.id")}:</span> {service.id}
                     </div>
                     <div className="card-item">
-                      <span>Service:</span> {service.name}
+                      <span>{t("service_page.name")}:</span> {service.name}
                     </div>
                     <div className="card-item">
-                      <span>Rate per 1000:</span> {service.rate_1000}
+                      <span>{t("service_page.rate_1000")}:</span>{" "}
+                      {service.rate_1000}
                     </div>
                     <div className="card-item">
-                      <span>Min order:</span> {service.min_order}
+                      <span>{t("service_page.min_order")}:</span>{" "}
+                      {service.min_order}
                     </div>
                     <div className="card-item">
-                      <span>Max order:</span> {service.max_order}
+                      <span>{t("service_page.max_order")}:</span>{" "}
+                      {service.max_order}
                     </div>
                     <div className="card-item">
-                      <span>Average time:</span> {service.average_time}
+                      <span>{t("service_page.average_time")}:</span>{" "}
+                      {service.average_time}
                     </div>
                     <div className="card-item">
-                      <span>Description:</span>
+                      <span>{t("service_page.description")}:</span>
                       <Button
                         className="bg-[#EA1261] px-6 text-white transition-colors hover:bg-[#d0105a] md:w-auto"
                         onClick={() => showModal(service.description)}
                       >
-                        View
+                        {t("service_page.view")}
                       </Button>
                     </div>
                   </div>
@@ -166,29 +172,13 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
                 columns={columns}
                 bordered={false}
                 isLoading={false}
-                limit={1000}
-                total={0}
-                onLimitChange={(limit) => {
-                  setParams({ ...params, limit });
-                }}
-                onPageChange={(page) => {
-                  setParams({ ...params, page });
-                }}
-                onSorterChange={(sorter) => {
-                  // setParams((prev: any) => ({
-                  //   ...prev,
-                  //   sortBy: sorter?.sortBy,
-                  //   sortType: sorter?.sortType,
-                  // }));
-                }}
-                page={params.page || 1}
+                limit={params.limit}
+                total={categoryService.services?.length || 0}
+                onLimitChange={(limit) => setParams({ ...params, limit })}
+                onPageChange={(page) => setParams({ ...params, page })}
+                onSorterChange={() => {}}
+                page={params.page}
                 scroll={{ x: "max-content" }}
-                onRow={(record, rowIndex) => {
-                  return {
-                    // onDoubleClick: (e) =>
-                    //   handleNavigateAppraisalDetail(record.appraisalFileId),
-                  };
-                }}
               />
             ),
           },
@@ -198,7 +188,7 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
       <Modal
         title={
           <>
-            <h4>Service description</h4>
+            <h4>{t("service_page.modal_title")}</h4>
             <Divider />
           </>
         }
@@ -215,6 +205,3 @@ const TableService: React.FC<Props> = ({ categoryService }) => {
 };
 
 export default React.memo(TableService);
-function useTranslation(): { t: any; i18n: any } {
-  throw new Error("Function not implemented.");
-}

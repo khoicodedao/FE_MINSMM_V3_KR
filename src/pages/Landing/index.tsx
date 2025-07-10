@@ -173,7 +173,7 @@ export default function Home() {
                     type="submit"
                     className="w-full rounded-md bg-yellow-400 px-6 py-2 font-semibold text-blue-900 transition-colors hover:bg-yellow-300"
                   >
-                    {t("signIn")}
+                    {t("home_landing.signIn")}
                   </button>
                 </div>
               </div>

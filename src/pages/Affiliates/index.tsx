@@ -159,8 +159,7 @@ const Affiliates = () => {
                   {t("affiliate_header")}
                 </h5>
                 <p className="text-base text-[#212121]">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
+                  {t("affiliate_description")}
                 </p>
                 <Button className="bg-[#ED1157] px-8 py-6 text-lg text-white hover:bg-[#ED1157]">
                   {t("affiliate_register_now")}
@@ -289,7 +288,9 @@ const Affiliates = () => {
                 </svg>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Minimum payout</span>
+                <span className="text-sm text-[#666270]">
+                  {t("minimumPayout")}
+                </span>
                 <span className="text-sm font-medium text-[#212121]">
                   ${minimumPayout}
                 </span>
@@ -302,7 +303,7 @@ const Affiliates = () => {
             {/* Visit */}
             <div className="rounded-lg border border-b-2 border-[#F1EFF5] border-b-[#F12E76] bg-[#F8F7FA] p-4">
               <div className="mb-3 flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Referrals</span>
+                <span className="text-sm text-[#666270]">{t("referrals")}</span>
                 <span className="text-sm font-medium text-[#212121]">
                   {tableData[0]?.referrals || 0}
                 </span>
@@ -315,7 +316,9 @@ const Affiliates = () => {
             {/* Registration */}
             <div className="rounded-lg border border-b-2 border-[#F1EFF5] border-b-[#0FC369] bg-[#F8F7FA] p-4">
               <div className="mb-3 flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Registration</span>
+                <span className="text-sm text-[#666270]">
+                  {t("registrations")}
+                </span>
                 <span className="text-sm font-medium text-[#212121]">
                   {tableData[0]?.registrations || 0}
                 </span>
@@ -328,7 +331,9 @@ const Affiliates = () => {
             {/* Conversion rate */}
             <div className="rounded-lg border border-b-2 border-[#F1EFF5] border-b-[#EDA012] bg-[#F8F7FA] p-4">
               <div className="mb-3 flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Conversion rate</span>
+                <span className="text-sm text-[#666270]">
+                  {t("conversionRate")}
+                </span>
                 <span className="text-sm font-medium text-[#212121]">
                   {tableData[0]?.conversionRate || 0} %
                 </span>
@@ -341,7 +346,9 @@ const Affiliates = () => {
             {/* Total earnings */}
             <div className="rounded-lg border border-b-2 border-[#F1EFF5] border-b-[#0CBE9B] bg-[#F8F7FA] p-4">
               <div className="mb-3 flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Total earnings</span>
+                <span className="text-sm text-[#666270]">
+                  {t("totalEarnings")}
+                </span>
                 <span className="text-sm font-medium text-[#212121]">
                   ${tableData[0]?.totalEarnings || 0}
                 </span>
@@ -356,7 +363,7 @@ const Affiliates = () => {
             <div className="rounded-lg border border-b-2 border-[#F1EFF5] border-b-[#10CFE4] bg-[#F8F7FA] p-4">
               <div className="mb-3 flex flex-col gap-1">
                 <span className="text-sm text-[#666270]">
-                  Available earnings
+                  {t("availableEarnings")}
                 </span>
                 <span className="text-sm font-medium text-[#212121]">
                   ${tableData[0]?.availableEarnings}
@@ -369,7 +376,7 @@ const Affiliates = () => {
             {/* Payout */}
             <div className="rounded-lg border border-b-2 border-[#F1EFF5] border-b-[#F67E55] bg-[#F8F7FA] p-4">
               <div className="mb-3 flex flex-col gap-1">
-                <span className="text-sm text-[#666270]">Payout</span>
+                <span className="text-sm text-[#666270]">{t("payout")}</span>
                 <span className="text-sm font-medium text-[#212121]">$0</span>
               </div>
               {/* <div className="relative h-2 overflow-hidden rounded-full bg-[#F1EFF5]">

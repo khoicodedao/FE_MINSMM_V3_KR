@@ -145,7 +145,7 @@ const Services = () => {
           />
           <Input
             name="search_string"
-            placeholder="Enter service name to search"
+            placeholder={t("placeholder_search_service")}
             value={formik.values.search_string}
             onChange={formik.handleChange}
             prefix={<Icons.searchIcon className="text-[#666270]" />}
