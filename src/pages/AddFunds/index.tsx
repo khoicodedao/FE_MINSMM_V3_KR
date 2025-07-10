@@ -32,6 +32,8 @@ import {
   LeftOutlined,
   RightOutlined,
 } from "@ant-design/icons";
+import { Steps } from "antd";
+import { WalletOutlined } from "@ant-design/icons";
 
 interface Bank {
   id: number;
@@ -80,6 +82,20 @@ const AddFunds = () => {
   //data sample response from QR payment
 
   const { t } = useTranslation();
+  const steps = [
+    {
+      title: t("step1"),
+    },
+    {
+      title: t("step2"),
+    },
+    {
+      title: t("step3"),
+    },
+    {
+      title: t("step4"),
+    },
+  ];
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethodType[]>([]);
   const [payments, setPayments] = useState<PaymentType[]>([]);
   const [totalPayments, setTotalPayments] = useState<number>(0);
@@ -321,10 +337,11 @@ const AddFunds = () => {
         <div className="mb-6 flex w-full flex-col gap-6 md:flex-row">
           <Card className="flex w-full flex-col space-y-6 md:w-1/2">
             <div className="mb-3 flex-col items-center justify-between md:flex-row">
-              <h5
-                className="mb-3 border-b border-[#F1EFF5] pb-3 text-base font-bold"
-                style={{ fontSize: "16px" }}
-              >
+              <h5 className="mb-3 flex items-center gap-2 border-b border-[#F1EFF5] pb-3 text-base font-bold">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-100">
+                  <WalletOutlined className="text-lg text-violet-500" />
+                </div>
+
                 {t("depositFundsToYourWallet")}
               </h5>
 
@@ -487,7 +504,7 @@ const AddFunds = () => {
                 className="text-center text-base font-bold"
                 style={{ fontSize: "16px" }}
               >
-                Instruction
+                {t("instruction")}
               </h5>
 
               <div className="relative">
@@ -513,19 +530,23 @@ const AddFunds = () => {
                     <h6 className="text-[16px] font-medium">
                       {t("instruction")}
                     </h6>
-                    <span className="mt-1 text-[14px]">
-                      <p className="">{t("step1")}</p>
-                      <p className="">{t("step2")}</p>
-                      <p className="">{t("step3")}</p>
-                      <p className="">{t("step4")}</p>
-                      {selectedInstruction ? (
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: selectedInstruction,
-                          }}
+                    <div className="space-y-2 text-sm leading-relaxed text-neutral-700">
+                      <div className="mb-6">
+                        <Steps
+                          direction="vertical" // hoặc "horizontal" nếu bạn muốn hiển thị ngang
+                          current={steps.length} // hoặc để là -1 nếu không muốn highlight bước nào
+                          items={steps}
                         />
-                      ) : null}
-                    </span>
+                        {selectedInstruction && (
+                          <div
+                            className="mt-4 rounded-md bg-gray-50 p-4 text-sm text-gray-700"
+                            dangerouslySetInnerHTML={{
+                              __html: selectedInstruction,
+                            }}
+                          />
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -567,8 +567,30 @@
       "0": "제목",
       "1": "메시지"
     }
-  }
-
+  },
+  "averageTime": "평균 시간",
+  "pleaseEnterAverageTime": "평균 시간을 입력하세요",
+  "enterAverageTime":  "평균 시간 입력",
+  "domain": "도메인",
+  "pleaseEnterDomain": "도메인을 입력하세요",
+  "currency": "통화",
+  "pleaseEnterAdminUsername": "관리자 사용자 이름",
+  "adminUsername": "관리자 사용자 이름",
+  "enterAdminUsername": "관리자 사용자 이름 입력",
+  "adminPassword"  : "관리자 비밀번호",
+  "pleaseEnterAdminPassword": "관리자 비밀번호를 입력하세요",
+  "pleaseConfirmPassword": "비밀번호를 확인해주세요",
+"passwordsDoNotMatch": "비밀번호가 일치하지 않습니다",
+"pricePerMonth": "월 요금",
+  "pleaseEnterPricePerMonth": "월 요금을 입력해 주세요",
+  "enterPricePerMonth": "월 요금을 입력하세요",
+  "confirmPassword": "비밀번호 확인",
+  "enterAdminPassword": "관리자 비밀번호를 입력하세요",
+  "selectCurrency": "통화를 선택하세요",
+  "enterDomain": "도메인을 입력하세요",
+  "pleaseChangeNameservers": "네임서버를 다음으로 변경해 주세요",
+  "selectPricePerMonth": "월 요금을 선택하세요",
+  "quickTips": "빠른 팁"
 
 }
 

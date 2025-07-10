@@ -20,8 +20,8 @@ import IdContainer from "components/IdContainer";
 import { SearchOutlined, StockOutlined } from "@ant-design/icons";
 //@ts-ignore
 import { useTranslation } from "react-i18next";
-import { DollarSign, ShoppingBag } from "lucide-react";
-
+import { DollarSign, ShoppingBag, Lightbulb } from "lucide-react";
+import { HistoryOutlined } from "@ant-design/icons"; // Thêm ở đầu file
 const { TextArea } = Input;
 
 interface CategoryType {
@@ -372,10 +372,18 @@ const NewOrder = () => {
         <div className="hidden h-[191px] w-[641px] flex-col gap-4 md:flex md:w-[30%]">
           <div className="h-[200px] rounded-xl bg-white p-4 shadow-md">
             <div className="flex flex-col items-start justify-start gap-2 p-4">
-              <div className="text-base font-medium capitalize text-neutral-800">
-                {t("orderHistory")}
+              {/* Icon & Title */}
+              <div className="flex items-center gap-2">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-100">
+                  <HistoryOutlined className="text-lg text-blue-500" />
+                </div>
+                <div className="text-base font-medium capitalize text-neutral-800">
+                  {t("orderHistory")}
+                </div>
               </div>
-              <div className="text-xs font-normal capitalize text-neutral-500">
+
+              {/* Description */}
+              <div className="mt-2 text-xs font-normal capitalize text-neutral-500">
                 {t("orderHistoryDescription")}
               </div>
             </div>
@@ -386,7 +394,9 @@ const NewOrder = () => {
       <div className="grid grid-cols-12 flex-wrap items-start gap-6">
         <div className="col-span-12 rounded-lg bg-white p-6 shadow-md md:col-span-7">
           <div className="mb-4 flex items-center gap-2 text-base font-bold text-black">
-            <ShoppingBag className="h-5 w-5" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-violet-100">
+              <ShoppingBag className="h-5 w-5 text-violet-600" />
+            </div>
             <span>{t("newOrder")}</span>
           </div>
           <CustomForm
@@ -542,11 +552,31 @@ const NewOrder = () => {
           </CustomForm>
         </div>
         <div className="col-span-12 rounded-xl bg-white p-6 shadow-md md:col-span-5">
-          <p>{t("needNoticeablePresence")}</p>
-          <br />
-          <p>{t("helpWithThat")}</p>
-          <br />
-          <p>{t("placeOrder")}</p>
+          {/* Icon & Title */}
+          <div className="mb-4 flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100">
+              <Lightbulb className="h-5 w-5 text-yellow-500" />
+            </div>
+            <h2 className="text-lg font-semibold text-neutral-800">
+              {t("quickTips")}
+            </h2>
+          </div>
+
+          {/* Content */}
+          <div className="space-y-3 text-sm leading-relaxed text-neutral-700">
+            <div className="flex items-start gap-2">
+              <span className="mt-1 text-green-500">✔️</span>
+              <p>{t("needNoticeablePresence")}</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1 text-blue-500">💡</span>
+              <p>{t("helpWithThat")}</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1 text-purple-500">📦</span>
+              <p>{t("placeOrder")}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
